@@ -40,10 +40,19 @@
             background-color: $cyan;
             text-decoration: none;
         }
+        position: relative;
         display: inline-flex;
         background: $deepBlue;
         color: white;
         font-size: 2em;
+        margin-bottom: 1.5em;
+
+        .label {
+            font-size: 0.8em;
+            color: $gray-700;
+            position: absolute;
+            bottom: -2em;
+        }
         
     }
 }
