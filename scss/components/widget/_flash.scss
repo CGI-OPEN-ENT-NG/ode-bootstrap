@@ -4,6 +4,26 @@
     color: #fff;
     position: relative;
 
+    &.red {
+        background: $red;
+    }
+
+    &.orange {
+        background: $orange;
+    }
+
+    &.green {
+        background: $green;
+    }
+
+    &.blue {
+        background: $blue;
+    }
+
+    &.grey-dark {
+        background: $gray-700;
+    }
+
     .btn-close {
         position: absolute;
         top: 10px;
