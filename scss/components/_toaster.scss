@@ -17,37 +17,4 @@
       text-decoration: none;
     }
   }
-  &__open {
-    @extend .btn;
-    position: absolute;
-    right: -5px;
-    bottom: -5px;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    border-radius: 50%;
-    font-size: 0.75rem;
-    padding: 0;
-    border: 1px solid $gray-300;
-    background-color: $gray-100;
-    &::before {
-      opacity: 0;
-      font-family: "Font Awesome 5 Free";
-      content: "\f00c";
-    }
-    &:hover {
-      background-color: $secondary-lightest;
-      border-color: $secondary-light;
-      &::before {
-        color: $secondary-darkest;
-        opacity: 0.5;
-      }
-    }
-    &.checked {
-      @extend .btn-secondary;
-      &::before {
-        opacity: 1;
-      }
-    }
-  }
 }
