@@ -1,10 +1,10 @@
-@function getUrl($path) {
-    @return url(#{$base-url}#{$path});
-}
+// @function getUrl($path) {
+//     @return url(#{$base-url}#{$path});
+// }
 
-@function getUrlStr($path) {
-    @return #{$base-url}#{$path};
-}
+// @function getUrlStr($path) {
+//     @return #{$base-url}#{$path};
+// }
 
 @mixin fonticon {
     font-family: "generic-icons";
