@@ -4,12 +4,13 @@
 // --- IMPORT BOOTSTRAP NATIVE ---
 @import "bootstrap";
 
+// --- IMPORT MIXINS ---
+@import "mixins/";
+
 // --- IMPORT TOKENS ---
 // Contient tous nos éléments de style les plus petits et les plus insécables
-@import "tokens/mixins";
 @import "tokens/display";
 @import "tokens/fonts"; 
-@import "tokens/transitions";
 @import "tokens/icons";
 @import "tokens/layout";
 @import "tokens/typography";

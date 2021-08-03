@@ -7,7 +7,7 @@
             @include background-color-to($gray-100, 0.4s, $easeOutQuad);
 
             .link-card {
-                @include link-decoration(none);
+                @include decoration-to(none);
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
