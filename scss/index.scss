@@ -11,12 +11,12 @@
 @import "tokens/display";
 @import "tokens/fonts"; 
 @import "tokens/icons";
-@import "tokens/layout";
 @import "tokens/typography";
 
 // --- IMPORT COMPONENTS ---
 // Contient tous nos composants visuels, simple ou complexe
 // A déplacer dans explorer.scss ? ça dépend si on veut faire une page css par application, pour éviter d'alourdir le CSS de manière inutile
+@import "components/container-advanced";
 @import "components/avatar";
 @import "components/buttons";
 @import "components/modal";
