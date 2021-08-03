@@ -6,6 +6,10 @@
     margin-bottom: 2em;
     overflow: hidden;
 
+    a {
+        text-decoration: none;
+    }
+
     ul {
         list-style-type: none;
         padding: 0;
@@ -40,7 +44,7 @@
             }
 
             .seemore-text {
-                text-transform:initial;
+                text-transform: initial;
                 font-weight: 400;
                 font-size: 0.8em;
                 padding-left: 0.5em;

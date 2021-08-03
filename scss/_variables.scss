@@ -1,18 +1,20 @@
 // COLOR // shadow // A Garder ou unifier avec les var $box-shadow ?
-$shadow-lightest:                       rgba($black, 0.1) ;
-$shadow-light:                          rgba($black, 0.3) ;
-$shadow:                                rgba($black, 0.6) ;
-$shadow-dark:                           rgba($black, 0.8) ;
-
-$deepBlue: #0984b3;
+$shadow-lightest:                       rgba(#000, 0.1);
+$shadow-light:                          rgba(#000, 0.3);
+$shadow:                                rgba(#000, 0.6);
+$shadow-dark:                           rgba(#000, 0.8);
 
 // Body
-$body-bg:                               $gray-100 ;
-$body-color:                            $gray-700 ;
+$body-bg:                               $gray-100;
+$body-color:                            $gray-700;
 
-$text-light:                            $gray-300 ;
-$text-lightest:                         $white ;
-$text-color:                            $gray-800 ;
+$text-light:                            $gray-300;
+$text-lightest:                         $white;
+$text-color:                            $gray-800;
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   2.5 !default;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -23,41 +25,18 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px
-) ;
-
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
-
-// Grid containers
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// ) ; // A CHANGER ?
-
-// @include _assert-ascending($container-max-widths, "$container-max-widths");
+) !default;
 
 // Components
 $border-radius-sm:                      5px ;
 $border-radius:                         5px ;
 $border-radius-lg:                      10px ;
 
-$component-active-bg:                   theme-color("secondary") ;
-
-
 // Typography
 $font-family-sans-serif:                "Roboto", sans-serif ;
 
 $line-height-base:                      1.6 ;
 
-// $h1-font-size:                          $font-size-base * 2.5 ;
-// $h2-font-size:                          $font-size-base * 2 ;
-// $h3-font-size:                          $font-size-base * 1.75 ;
-// $h4-font-size:                          $font-size-base * 1.5 ;
-// $h5-font-size:                          $font-size-base * 1.25 ;
-// $h6-font-size:                          $font-size-base ;
 
 // Tables
 $table-head-bg:                         $gray-100 ;
@@ -69,57 +48,39 @@ $table-dark-bg:                         $gray-800 ;
 // Buttons + Forms
 $input-btn-font-family:                 "Roboto" ;
 
-// Buttons
-// $btn-border-radius:                     $border-radius ;
-// $btn-border-radius-lg:                  $border-radius-lg ;
-// $btn-border-radius-sm:                  $border-radius-sm ;
-
 // Forms
-$input-border-color:                    $gray-300 ;
-
-// $input-border-radius:                   $border-radius ;
-// $input-border-radius-lg:                $border-radius-lg ;
-// $input-border-radius-sm:                $border-radius-sm ;
-
-$input-focus-border-color:              $secondary ;
+$input-border-color:                    $gray-300 !default;
+$input-focus-border-color:              $secondary !default;
 
 // Dropdowns
-$dropdown-link-color:                   $gray-700 ;
-$dropdown-link-hover-color:             darken($gray-900, 5%) ;
-$dropdown-link-hover-bg:                rgba($secondary, 0.1) ;
+$dropdown-link-color:                   $gray-700 !default;
+$dropdown-link-hover-color:             darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:                rgba($secondary, 0.1) !default;
 
-$dropdown-link-disabled-color:          $gray-600 ;
 
 // Cards
-$card-spacer-y:                         25px ; //? perso ou pas ?
-$card-spacer-x:                         35px ; //? perso ou pas ?
-$card-min-height:                       110px; //? perso ou pas ?
-$card-width:                            265px; //? perso ou pas ?
+$card-spacer-y:                         25px !default; //? perso ou pas ?
+$card-spacer-x:                         35px !default; //? perso ou pas ?
+$card-min-height:                       110px !default; //? perso ou pas ?
+$card-width:                            265px !default; //? perso ou pas ?
 
 // Tooltips
-// $tooltip-max-width:                     200px ;
-// $tooltip-color:                         $white ;
-// $tooltip-bg:                            $black ;
-// $tooltip-opacity:                       .9 ;
+// $tooltip-max-width:                     200px !default;
+// $tooltip-color:                         $white !default;
+// $tooltip-bg:                            $black !default;
+// $tooltip-opacity:                       .9 !default;
 
 // Badges
-$badge-font-size:                       80% ; //? perso ou pas ?
+$badge-font-size:                       80% !default; //? perso ou pas ?
 
 // Modals
-// $modal-backdrop-bg:                 $black ;
-// $modal-backdrop-opacity:            .65 ;
-// $modal-header-border-color:         $border-color ;
-// $modal-footer-border-color:         $modal-header-border-color ;
-// $modal-header-border-width:         $modal-content-border-width ;
-// $modal-footer-border-width:         null ;
-
-// Alerts
-$alert-bg-level:                        -10 ;
-$alert-border-level:                    -7 ;
-$alert-color-level:                     5 ;
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .65 !default;
+$modal-footer-border-width:         0 !default;
+$modal-header-border-width:         0 !default;
 
 // Image thumbnails
-$thumbnail-bg:                          $white ;
+$thumbnail-bg:                          $white !default;
 
 $applications: (
     "competences" : (

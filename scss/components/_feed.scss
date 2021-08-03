@@ -45,7 +45,7 @@ $feed-spacing: 20px !default;
         &:before {
             background: currentColor;
             width: 4px;
-            @include border-left-radius(8px);
+            @include border-start-radius(8px);
         }
 
         .zone-avatar {
