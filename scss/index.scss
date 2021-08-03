@@ -1,12 +1,8 @@
-// --- IMPORT BOOTSTRAP NATIVE ---
-// Contient nos fichiers bootstrap
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
-
+@import "colors";
 @import "variables";
 
-@import "node_modules/bootstrap/scss/bootstrap";
+// --- IMPORT BOOTSTRAP NATIVE ---
+@import "bootstrap";
 
 // --- IMPORT TOKENS ---
 // Contient tous nos éléments de style les plus petits et les plus insécables

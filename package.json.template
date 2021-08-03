@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.0.2",
     "entcore-generic-icons": "opendigitaleducation/generic-icons"
   }
 }
