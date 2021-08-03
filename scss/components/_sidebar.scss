@@ -66,6 +66,8 @@ $sidebar-width: 250px;
       }
       label {
         display: block;
+
+        //@include prepend-icon('\f105')
         a::before {
           font-family: "FontAwesome";
           content: "\f105";
