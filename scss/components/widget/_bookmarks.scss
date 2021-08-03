@@ -8,7 +8,7 @@
             border-bottom: 1px solid $gray-100;
 
             .link {
-                @include link-decoration(none);
+                @include decoration-to(none);
                 @include insert-icon("\f0c1", 0.8em, 1em);
 
                 padding: 0.4em 0 0.4em 25px;

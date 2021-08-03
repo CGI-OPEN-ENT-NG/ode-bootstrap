@@ -86,3 +86,8 @@ $default-duration: 0.4s;
         color: $color;
     }
 }
+@mixin decoration-to($state: "underline") {
+    &:hover {
+        text-decoration: $state;
+    }
+}
