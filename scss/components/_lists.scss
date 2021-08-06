@@ -1,8 +1,8 @@
 .list {
-  &__header {
+  &-header {
     display: flex;
     justify-content: space-between;
-    font-size: 0.875rem!important;
+    font-size: 1.4rem;
     font-weight: bold;
     color: $gray-600;
     padding: 5px 15px;
@@ -10,7 +10,7 @@
       width: 40px;
     }
   }
-  &__item {
+  &-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@
     padding: 5px 15px;
     border-radius: $border-radius-lg;
     color: $gray-600;
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     cursor: pointer;
     @extend .transition-hover;
     &:hover {
@@ -31,14 +31,14 @@
       border-color: $secondary;
       background-color: rgba($secondary, 0.1);
     }
-    .list__item--preview {
+    .list-item-preview {
       width: 40px;
       vertical-align: middle;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       text-align: center;
     }
-    .list__title {
-      font-size: 1rem;
+    .list-title {
+      font-size: 1.6rem;
       font-weight: bold;
       color: $gray-700;
       margin: 0;
@@ -46,34 +46,34 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    .list__image {
+    .list-image {
       width: 30px;
       height: 30px;
       border-radius: $border-radius;
       margin-right: 5px;
     }
-    .list__status {
+    .list-status {
       text-align: right;
-      font-size: 1rem;
+      font-size: 1.6rem;
       padding-right: 10px;
       > * {
         margin: 0 5px;
       }
     }
-    .list__modifiedBy {
-      font-size: 0.75rem;
+    .list-modifiedBy {
+      font-size: 1.2rem;
     }
   }
-  &__title {
+  &-title {
     width: calc(100% - 450px);
   }
-  &__status {
+  &-status {
     width: 75px;
   }
-  &__owner {
+  &-owner {
     width: 200px;
   }
-  &__modification {
+  &-modification {
     width: 175px;
   }
 }
@@ -86,28 +86,28 @@
     border-bottom-color: transparent;
   }
   .list {
-    &__header {
+    &-header {
       display: none;
     }
-   &__item {
+   &-item {
      flex-wrap: wrap;
      padding: 10px;
      margin: 10px 0;
      border-color: $gray-300;
-     .list__title {
+     .list-title {
        width: calc(100% - 40px); // 100% - .list__item--preview
      }
-     .list__status {
+     .list-status {
        display: none;
      }
-     .list__owner {
+     .list-owner {
        width: 55%;
      }
-     .list__modification {
+     .list-modification {
        width: 45%;
        text-align: right;
      }
-     .list__modifiedBy {
+     .list-modifiedBy {
        display: none;
      }
    }
