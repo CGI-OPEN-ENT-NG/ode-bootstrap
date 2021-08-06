@@ -1,7 +1,7 @@
 /* DOCUMENTATION
-<aside class="sidebar sidebar--left">
-  <h1 class="sidebar__title">Titre de l'application</h1>
-  <ul class="sidebar__tree">
+<aside class="sidebar sidebar-left">
+  <h1 class="sidebar-title">Titre de l'application</h1>
+  <ul class="sidebar-tree">
     <li>
       <input type="checkbox" id="" />
       <label for=""><a href="">Mes ressources</a></label>
@@ -38,13 +38,13 @@ $sidebar-width: 250px;
   font-size: 1.4rem;
   font-weight: bold;
   box-shadow: -5px 5px 10px rgba(0,0,0,0.05);
-  &__title {
+  &-title {
     color: $secondary;
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 20px;
   }
-  &__tree {
+  &-tree {
     max-height: calc(100vh - 305px);
     overflow-y: auto;
     scrollbar-width: thin;
@@ -66,7 +66,6 @@ $sidebar-width: 250px;
       }
       label {
         display: block;
-
         //@include prepend-icon('\f105')
         a::before {
           font-family: "FontAwesome";
@@ -109,10 +108,10 @@ $sidebar-width: 250px;
   }
 }
 
-.sidebar--left {
+.sidebar-left {
   border-radius: $border-radius 0 0 $border-radius;
 }
-.sidebar--right {
+.sidebar-right {
   border-radius: 0 $border-radius $border-radius 0;
 }
 
@@ -122,82 +121,86 @@ $sidebar-width: 250px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
 }
 
-.sidebar__mobile {
-  margin-right: auto;
-  display: none;
-  .sidebar {
-    display: block;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 46px;
-    bottom: 0;
-    background-color: rgba($white, 0.95);
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    @extend .transition-hover;
-    &__tree {
-      max-height: calc(100vh - 200px);
-    }
-    &__close {
-      display: flex;
-      justify-content: flex-end;
-      padding-bottom: 5px;
-      i {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: $gray-600;
-        color: white;
-      }
-    }
-  }
-  input[type=checkbox] {
-    display: block;
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    top: -2px;
-    left: -4px;
-    cursor: pointer;
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-    -webkit-touch-callout: none;
-  }
-  input[type=checkbox]:checked ~ .sidebar {
-    visibility: visible;
-    opacity: 1;
-    z-index: 1000;
-    @extend .transition-hover;
-  }
-  .ic-burger {
-    color: $gray-600;
-    font-size: 1rem;
-  }
-  .input-searchbar {
-    @extend .p-0;
-    @extend .mb-2;
-    .ic-search {
-      left: 15px;
-      top: 9px;
-    }
+// .sidebar-mobile {
+//   margin-right: auto;
+//   display: none;
+//   .sidebar {
+//     display: block;
+//     position: fixed;
+//     width: 100%;
+//     left: 0;
+//     right: 0;
+//     top: 46px;
+//     bottom: 0;
+//     background-color: rgba($white, 0.95);
+//     visibility: hidden;
+//     opacity: 0;
+//     z-index: -1;
+//     @extend .transition-hover;
+//     &-tree {
+//       max-height: calc(100vh - 200px);
+//     }
+//     &-close {
+//       display: flex;
+//       justify-content: flex-end;
+//       padding-bottom: 5px;
+//       i {
+//         display: inline-block;
+//         width: 25px;
+//         height: 25px;
+//         line-height: 25px;
+//         text-align: center;
+//         border-radius: 50%;
+//         background-color: $gray-600;
+//         color: white;
+//       }
+//     }
+//   }
+//   input[type=checkbox] {
+//     display: block;
+//     width: 100px;
+//     height: 30px;
+//     position: absolute;
+//     top: -2px;
+//     left: -4px;
+//     cursor: pointer;
+//     opacity: 0; /* hide this */
+//     z-index: 2; /* and place it over the hamburger */
+//     -webkit-touch-callout: none;
+//   }
+//   input[type=checkbox]:checked ~ .sidebar {
+//     visibility: visible;
+//     opacity: 1;
+//     z-index: 1000;
+//     @extend .transition-hover;
+//   }
+//   .ic-burger {
+//     color: $gray-600;
+//     font-size: 1rem;
+//   }
+//   .input-searchbar {
+//     @extend .p-0;
+//     @extend .mb-2;
+//     .ic-search {
+//       left: 15px;
+//       top: 9px;
+//     }
+//   }
+// }
+.sidebar.offcanvas {
+  background-color: rgba($white, 0.95);
+  .sidebar-tree {
+    max-height: calc(100vh - 100px);
   }
 }
 
 @include media-breakpoint-down(md) {
   .sidebar {
-    display: none;
+    width: inherit;
+    background-color: $white;
   }
   .sidebar + .main-content {
     width: 100%;
     border-radius: $border-radius;
-  }
-  .sidebar__mobile {
-    display: block;
   }
 }
