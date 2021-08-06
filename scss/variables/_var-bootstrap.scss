@@ -34,6 +34,7 @@ $border-radius-lg:                      10px ;
 
 // Typography
 $font-family-sans-serif:                "Roboto", sans-serif ;
+$font-size-base:                        1.6rem ;
 $line-height-base:                      1.6 ;
 
 // Tables
@@ -46,6 +47,12 @@ $table-dark-bg:                         $gray-800 ;
 // Forms
 $input-border-color:                    $gray-300 !default;
 $input-focus-border-color:              $secondary !default;
+$input-btn-padding-x:                   1rem;
+$form-floating-padding-x:               1rem;
+$form-floating-padding-y:               1.25rem;
+$form-floating-height:                  5rem;
+$form-floating-input-padding-t:         1.75rem;
+$form-floating-input-padding-b:         .5rem;
 
 // Dropdowns
 $dropdown-link-color:                   $gray-700 !default;
