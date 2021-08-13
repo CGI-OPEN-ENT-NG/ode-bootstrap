@@ -86,7 +86,7 @@ $applications: (
         "glyph": '\e927'
     ),
     "cahier-textes" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e86f'
     ),
     "poll" : (
@@ -98,7 +98,7 @@ $applications: (
         "glyph": '\e80d'
     ),
     "rbs" : (
-        "color" : $red,
+        "color" : $pink,
         "glyph": '\e80e'
     ),
     "searchengine" : (
@@ -106,23 +106,23 @@ $applications: (
         "glyph": '\e8d0'
     ),
     "sharebigfiles" : (
-        "color" : $red,
+        "color" : $purple,
         "glyph": '\e8cb'
     ),
     "schoolbook" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e91e'
     ),
     "archive" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e81d'
     ),
     "admin" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e81a'
     ),
     "cahier-de-texte" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e910'
     ),
     "wiki" : (
@@ -130,15 +130,19 @@ $applications: (
         "glyph": '\e813'
     ),
     "cns" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e88a'
     ),
     "conversation" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e804'
     ),
     "paths" : (
-        "color" : $red,
+        "color" : $orange,
+        "glyph": '\e94d'
+    ),
+    "parcours" : (
+        "color" : $orange,
         "glyph": '\e94d'
     ),
     "notebook" : (
@@ -146,6 +150,10 @@ $applications: (
         "glyph": '\e8d4'
     ),
     "scrap-book" : (
+        "color" : $teal,
+        "glyph": '\e8d4'
+    ),
+    "scrapbook" : (
         "color" : $teal,
         "glyph": '\e8d4'
     ),
@@ -158,7 +166,7 @@ $applications: (
         "glyph": '\e905'
     ),
     "support" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e835'
     ),
     "workspace" : (
@@ -170,39 +178,51 @@ $applications: (
         "glyph": '\e908'
     ),
     "stats" : (
-        "color" : $red,
+        "color" : $purple,
         "glyph": '\e909'
     ),
     "userbook" : (
-        "color" : $red,
+        "color" : $teal,
+        "glyph": '\e811'
+    ),
+    "directory" : (
+        "color" : $teal,
         "glyph": '\e811'
     ),
     "mindmap" : (
         "color" : $cyan,
         "glyph": '\e859'
     ),
+    "timeline" : (
+        "color" : $yellow,
+        "glyph": '\e819'
+    ),
     "timelinegenerator" : (
         "color" : $yellow,
         "glyph": '\e819'
     ),
     "actualites" : (
-        "color" : $indigo,
+        "color" : $cyan,
         "glyph": '\e85b'
     ),
     "pad" : (
-        "color" : $red,
+        "color" : $cyan,
+        "glyph": '\e829'
+    ),
+    "collaborativeeditor" : (
+        "color" : $cyan,
         "glyph": '\e829'
     ),
     "settings-class" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e942'
     ),
     "library" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e94c'
     ),
     "visioconf" : (
-        "color" : $pink,
+        "color" : $purple,
         "glyph": '\e957'
     ),
     "Web-conference" : (
@@ -210,8 +230,8 @@ $applications: (
         "glyph": '\e957'
     ),
     "notes" : (
-        "color" : $red,
-        "glyph": '\e832'
+        "color" : $yellow,
+        "glyph": '\e806'
     ),
     "attendance" : (
         "color" : $red,
@@ -222,27 +242,31 @@ $applications: (
         "glyph": '\e833'
     ),
     "calendar" : (
-        "color" : $red,
+        "color" : $yellow,
         "glyph": '\e834'
     ),
+    "canal-numerique" : (
+        "color" : $cyan,
+        "glyph": '\e80a'
+    ),
     "collaborative-wall" : (
-        "color" : $red,
+        "color" : $teal,
         "glyph": '\e800'
     ),
     "statistics" : (
-        "color" : $red,
+        "color" : $purple,
         "glyph": '\e810'
     ),
     "polls" : (
-        "color" : $red,
+        "color" : $cyan,
         "glyph": '\e832'
     ),
     "community" : (
-        "color" : $red,
+        "color" : $purple,
         "glyph": '\e814'
     ),
     "forum" : (
-        "color" : $red,
+        "color" : $cyan,
         "glyph": '\e81e'
     ),
     "pages" : (
@@ -251,7 +275,7 @@ $applications: (
     ),
     "website" : (
         "color" : $red,
-        "glyph": '\e94a'
+        "glyph": '\e90a'
     ),
     "parametrage" : (
         "color" : $red,
@@ -269,4 +293,5 @@ $applications: (
         "color" : $red,
         "glyph": '\e899'
     ),
+    
 ) !default;
