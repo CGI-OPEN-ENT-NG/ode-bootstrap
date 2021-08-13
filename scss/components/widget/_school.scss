@@ -1,20 +1,37 @@
 //Widget établissement
 .widget-school {
-    .header {
-        padding: $widget-padding-x;
+    &-header {
+        @include border-top-radius(6px);
+        padding: 30px $widget-padding-x;
         color: white;
         background-position: center;
         background-size: cover;
-        font-size: 1.5em;
         position: relative;
-        padding-bottom: 50px;
-        margin-bottom: 25px;
+        font-size: 1.3em;
 
         .name {
-            font-weight: 700;
+            font-weight: 600;
         }
         .school {
-            font-weight: 400;
+            &,
+            &-multiple {
+                position: relative;
+                font-weight: 400;
+                font-size: 0.9em;
+            }
+            &-multiple {
+                @include prepend-icon("\f150", 1.1em);
+                padding-left: 1.5em;
+                cursor: pointer;
+            }
+
+            &-choice {
+                > div {
+                    @include color-to($primary);
+                    padding: 6px 20px;
+                    cursor: pointer;
+                }
+            }
         }
         .avatar-list {
             position: absolute;
