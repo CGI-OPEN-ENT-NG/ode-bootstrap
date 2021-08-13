@@ -67,6 +67,10 @@
                 color: $gray-400;
                 text-decoration: none;
             }
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
         }
 
         &:hover {
