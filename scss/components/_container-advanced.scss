@@ -1,5 +1,5 @@
-$-breakpoint-up:'lg';
-$-breakpoint-down:'md';
+$-breakpoint-up: "lg";
+$-breakpoint-down: "lg";
 
 .container-advanced {
     overflow: hidden;
@@ -65,6 +65,11 @@ $-breakpoint-down:'md';
     &-nav {
         background-color: $deepBlue;
         color: white;
+
+        @include media-breakpoint-up($-breakpoint-up) {
+            display: none;
+        }
+
         .list-trigger {
             display: flex;
             justify-content: space-around;
