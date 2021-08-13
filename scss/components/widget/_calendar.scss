@@ -5,7 +5,7 @@
     }
     
     .day-item {
-        padding-bottom: 1em;
+        padding-bottom: 0.5em;
         position: relative;
 
         &-title {
@@ -33,17 +33,22 @@
     }
     .moment-item {
         padding-left: 25px;
-        padding-bottom: 0.25em;
+        padding-bottom: 0.75em;
         display: flex;
-        align-items: center;
+        align-items: start;
 
         .icon,
         .hour {
             margin-right: 0.75em;
+            width: 1em;
         }
         .hour {
-            width: 2.8em;
+            width: 2.5em;
             text-align: right;
+        }
+
+        .link {
+            flex: 1;
         }
     }
 
