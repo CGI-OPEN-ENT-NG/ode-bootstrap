@@ -1,118 +1,118 @@
 .sticky-toolbox {
-    @include add-transitions(transform);
-    position: fixed;
-    top: 100px;
-    right: 0px;
+  @include add-transitions(transform);
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 10;
+  color: white;
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .link-tool {
+    position: absolute;
+    width: 50px;
+    padding: 5px 10px;
+    font-size: 1.5em;
     color: white;
-    z-index: 10;
-    transform: translateX(100%);
+    cursor: pointer;
+    background: $primary;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transform: translate(-100%, 0);
+  }
 
-    &.open {
-        transform: translateX(0);
+  .content {
+    width: 400px;
+    height: 100%;
+    padding: 20px 30px;
+    background: $deepBlue;
+  }
+
+  .title {
+    margin: 0 0 10px;
+    font-weight: bold;
+    &:not(:first-child) {
+      margin-top: 10px;
     }
+  }
 
-    .link-tool {
-        position: absolute;
-        color: white;
-        font-size: 1.5em;
-        padding: 5px 10px;
-        cursor: pointer;
-        background: $primary;
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50%;
-        width: 50px;
-        transform: translate(-100%, 0);
+  .bt {
+    @include background-color-to(rgba($cyan, .6));
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background: $cyan;
+    border-radius: 0;
+
+    &.selected {
+      background: $primary;
     }
+  }
 
-    .content {
-        background: $deepBlue;
-        width: 400px;
-        height: 100%;
-        padding: 20px 30px;
+  [class*="buttons-"] {
+    margin-right: -5px;
+    margin-left: -5px;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px;
+      margin-bottom: 10px;
     }
+  }
 
-    .title {
-        margin: 0 0 10px 0;
-        font-weight: bold;
-        &:not(:first-child) {
-            margin-top: 10px;
-        }
-    }
-
+  .buttons-theme {
     .bt {
-        @include background-color-to(rgba($cyan, 0.6));
-        text-align: center;
-        background: $cyan;
-        color: white;
+      padding: 20px 10px;
+    }
+  }
+
+  .buttons-widget {
+    .bt {
+      .inner {
+        position: relative;
         display: block;
-        text-decoration: none;
-        border-radius: 0px;
+        padding-top: 100%;
+      }
+      i {
+        @include have-child-in-middle();
+        @include square(100%);
+        position: absolute;
+        top: 0;
+        font-size: 2em;
+      }
+    }
+  }
 
-        &.selected {
-            background: $primary;
-        }
+  .bt-lang {
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    .flag {
+      @include add-transitions(filter);
+      // width: 60px;
+      height: auto;
+      margin: 0 auto;
+      filter: saturate(0);
     }
 
-    [class*="buttons-"] {
-        margin-right: -5px;
-        margin-left: -5px;
-
-        > .col,
-        > [class*="col-"] {
-            padding-right: 5px;
-            padding-left: 5px;
-            margin-bottom: 10px;
-        }
+    &.selected {
+      .flag {
+        filter: saturate(1);
+      }
     }
 
-    .buttons-theme {
-        .bt {
-            padding: 20px 10px;
-        }
+    &:hover:not(.selected) {
+      .flag {
+        filter: saturate(.3);
+      }
     }
-
-    .buttons-widget {
-        .bt {
-            .inner {
-                display: block;
-                position: relative;
-                padding-top: 100%;
-            }
-            i {
-                @include have-child-in-middle();
-                @include square(100%);
-                position: absolute;
-                top: 0;
-                font-size: 2em;
-            }
-        }
-    }
-
-    .bt-lang {
-        text-align: center;
-        margin-bottom: 15px;
-        cursor: pointer;
-        color: #fff;
-        text-decoration: none;
-
-        .flag {
-            @include add-transitions(filter);
-            // width: 60px;
-            height: auto;
-            margin: 0 auto;
-            filter: saturate(0);
-        }
-
-        &.selected {
-            .flag {
-                filter: saturate(1);
-            }
-        }
-
-        &:hover:not(.selected) {
-            .flag {
-                filter: saturate(0.3);
-            }
-        }
-    }
+  }
 }

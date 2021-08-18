@@ -1,23 +1,23 @@
 .link,
 .link a {
-    @include color-to($primary);
-    color: $deepBlue;
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
+  @include color-to($primary);
+  font-weight: 400;
+  color: $deepBlue;
+  text-decoration: none;
+  cursor: pointer;
 }
 .link-discret,
 .link-discret a {
-    @include color-to($deepBlue);
-    color: currentColor;
-    font-weight: 400;
-    cursor: pointer;
-    text-decoration: none;
+  @include color-to($deepBlue);
+  font-weight: 400;
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .subtitle {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
 }
