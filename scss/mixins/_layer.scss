@@ -1,34 +1,34 @@
 @mixin base-layer() {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 @mixin add-before-layer() {
-    position: relative;
-    &:before {
-        @include base-layer();
-        @content;
-    }
+  position: relative;
+  &::before {
+    @include base-layer();
+    @content;
+  }
 }
 
 @mixin add-after-layer() {
-    position: relative;
-    &:after {
-        @include base-layer();
-        @content;
-    }
+  position: relative;
+  &::after {
+    @include base-layer();
+    @content;
+  }
 }
 
-@mixin add-overlay($opacity: 0.5) {
-    position: relative;
-    &:before {
-        @include base-layer();
-        background: rgba(0, 0, 0, $opacity);
-        z-index: 1;
-    }
+@mixin add-overlay($opacity: .5) {
+  position: relative;
+  &::before {
+    @include base-layer();
+    z-index: 1;
+    background: rgba(0, 0, 0, $opacity);
+  }
 }

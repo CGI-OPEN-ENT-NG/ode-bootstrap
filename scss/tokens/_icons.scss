@@ -1,44 +1,44 @@
 // Initialize good style and good font sur all icons
 i[class*="ic-"] {
-    font-family: "generic-icons";
-    font-style: normal;
-    font-weight: normal;
+  font-family: "generic-icons";
+  font-style: normal;
+  font-weight: normal;
 }
 
 // Icons list
 .ic {
-    @each $icon, $data in $icons-interface {
-        &-#{$icon} {
-            &::before {
-                content: map-get($data, "glyph");
-            }
-        }
+  @each $icon, $data in $icons-interface {
+    &-#{$icon} {
+      &::before {
+        content: map-get($data, "glyph");
+      }
     }
+  }
 }
 
 // Icons editor
 
 .color-app {
-    @each $app, $data in $applications {
-        &-#{$app}{
-            color: map-get($data, "color");
-        }
+  @each $app, $data in $applications {
+    &-#{$app}{
+      color: map-get($data, "color");
     }
+  }
 }
 .bg-app {
-    @each $app, $data in $applications {
-        &-#{$app}{
-            background-color: map-get($data, "color");
-        }
+  @each $app, $data in $applications {
+    &-#{$app}{
+      background-color: map-get($data, "color");
     }
+  }
 }
 
 .ic-app {
-    @each $app, $data in $applications {
-        &.#{$app}{
-            &::before {
-                content:  map-get($data, "glyph");
-            }
-        }
+  @each $app, $data in $applications {
+    &.#{$app}{
+      &::before {
+        content: map-get($data, "glyph");
+      }
     }
+  }
 }

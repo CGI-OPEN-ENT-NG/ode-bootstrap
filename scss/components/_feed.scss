@@ -1,170 +1,170 @@
 $feed-spacing: 20px !default;
 
 .feed {
-    font-size: 14px;
+  font-size: 14px;
 
-    .filter-button {
-        @include append-icon("\f107", 1em, 0);
-        display: inline-block;
-        margin-bottom: 0.5em;
+  .filter-button {
+    @include append-icon("\f107", 1em, 0);
+    display: inline-block;
+    margin-bottom: .5em;
+  }
+
+  &-divider-message {
+    @include add-before-layer() {
+      top: 50%;
+      z-index: -1;
+      height: 1px;
+      border-top: 2px dashed $gray-400;
+    }
+    margin-bottom: $feed-spacing;
+
+    text-align: center;
+
+    .message {
+      color: $gray-600;
+      background: $body-bg;
+    }
+  }
+
+  &-list {
+  }
+
+  &-item {
+    @include add-before-layer();
+    display: flex;
+    padding: 15px 20px;
+    margin-bottom: $feed-spacing;
+    overflow: hidden;
+    background: white;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(lg){
+      padding-right: 50px;
     }
 
-    &-divider-message {
-        @include add-before-layer() {
-            border-top: 2px dashed $gray-400;
-            height: 1px;
-            top: 50%;
-            z-index: -1;
-        }
-
-        text-align: center;
-        margin-bottom: $feed-spacing;
-
-        .message {
-            color: $gray-600;
-            background: $body-bg;
-        }
+    &::before {
+      width: 4px;
+      background: currentColor;
+      @include border-start-radius(8px);
     }
 
-    &-list {
+    .zone-avatar {
+      padding-right: 25px;
+      justify-self: stretch;
     }
+    .zone-text {
+      flex: 1;
+      color: $gray-800;
 
-    &-item {
-        @include add-before-layer();
-        padding: 15px 20px;
-        background: white;
-        border-radius: 8px;
+      .meta {
         display: flex;
-        margin-bottom: $feed-spacing;
-        overflow: hidden;
+        justify-content: space-between;
+        padding-bottom: .4em;
+        margin-bottom: .4em;
+        font-size: .8em;
+        color: $gray-600;
+        border-bottom: 1px solid $gray-200;
 
-        @include media-breakpoint-down(lg){
-            padding-right: 50px;
+        .app-name {
+          line-height: 20px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
         }
-
-        &:before {
-            background: currentColor;
-            width: 4px;
-            @include border-start-radius(8px);
+        .date {
         }
+      }
 
-        .zone-avatar {
-            padding-right: 25px;
-            justify-self: stretch;
+      .report {
+        br:first-of-type {
+          display: none;
         }
-        .zone-text {
-            color: $gray-800;
-            flex: 1;
-
-            .meta {
-                color: $gray-600;
-                font-size: 0.8em;
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px solid $gray-200;
-                padding-bottom: 0.4em;
-                margin-bottom: 0.4em;
-
-                .app-name {
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    line-height: 20px;
-                }
-                .date {
-                }
-            }
-
-            .report {
-                br:first-of-type {
-                    display: none;
-                }
-                a {
-                    @extend .link;
-                }
-            }
-
-            .username {
-                //
-                .link {
-                    color: currentColor;
-                }
-            }
+        a {
+          @extend .link;
         }
+      }
 
-        .zone-tools {
-            @include add-transitions(transform);
-            justify-self: stretch;
-            position: absolute;
-            height: 100%;
-            background-color: white;
-            top: 0;
-            right: 0;
-            z-index: 20;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            transform: translateX(120%);
-            padding-left: 20px;
-            @include media-breakpoint-down(lg){
-                transform: translateX(100%);
-            }
-
-            .control {
-                @include prepend-icon("\f053", 1.6em) {
-                    @include add-transitions(transform);
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    padding: 0 10px;
-                    position: relative;
-                    transform-origin: center;
-                    transform: translateY(0);
-                    top: 0;
-                }
-                @include background-color-to($deepBlue);
-                @include color-to(white);
-                color: $deepBlue;
-                transform: translateX(-100%);
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                cursor: pointer;
-                background: white;
-                border-right: 1px solid;
-                border-left: 1px solid;
-                border-color: $gray-200;
-                box-shadow: -5px 0px 10px -10px rgba(0,0,0,0.25);
-            }
-
-            .link {
-                display: block;
-            }
-
-            &.open {
-                transform: translateX(0)!important;
-                .control {
-                    &:before {
-                        transform: rotate(180deg);
-                    }
-                }
-
-            }
+      .username {
+        //
+        .link {
+          color: currentColor;
         }
-
-        &:hover {
-            .zone-tools {
-                transform: translateX(100%);
-            }
-        }
-
-        &.new {
-            .date {
-                @include append-icon("\f111", 0.7em, 0px, $orange);
-                @include set-icon-top(1em);
-            }
-        }
+      }
     }
+
+    .zone-tools {
+      @include add-transitions(transform);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      width: 60%;
+      height: 100%;
+      padding-left: 20px;
+      background-color: white;
+      transform: translateX(120%);
+      justify-self: stretch;
+      @include media-breakpoint-down(lg){
+        transform: translateX(100%);
+      }
+
+      .control {
+        @include prepend-icon("\f053", 1.6em) {
+          @include add-transitions(transform);
+          position: relative;
+          top: 0;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding: 0 10px;
+          transform: translateY(0);
+          transform-origin: center;
+        }
+        @include background-color-to($deepBlue);
+        @include color-to(white);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        color: $deepBlue;
+        cursor: pointer;
+        background: white;
+        border-color: $gray-200;
+        border-right: 1px solid;
+        border-left: 1px solid;
+        box-shadow: -5px 0 10px -10px rgba(0, 0, 0, .25);
+        transform: translateX(-100%);
+      }
+
+      .link {
+        display: block;
+      }
+
+      &.open {
+        transform: translateX(0) !important;
+        .control {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+
+      }
+    }
+
+    &:hover {
+      .zone-tools {
+        transform: translateX(100%);
+      }
+    }
+
+    &.new {
+      .date {
+        @include append-icon("\f111", .7em, 0, $orange);
+        @include set-icon-top(1em);
+      }
+    }
+  }
 }

@@ -49,6 +49,22 @@ And then you can override all variables:
 - defined *node_modules/ode-bootstrap/scss/_variables-ode*
 - defined in bootstrap framework
 
+
+## Linter SCSS
+
+Lancer le linter sur les fichers scss du projet
+```
+./build.sh lint
+```
+
+Pour un affichage des problèmes en temps réel, installer le plugin VSC stylelint.
+Pour une correction du formattage à l'enregistrement, ajouter au ficher de configuration settings.json:
+```
+"editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+},
+```
+
 ## Documentation
 
 A documentation listing all available components is available [here](docs/index.html). You can preview all of them and copy source code.

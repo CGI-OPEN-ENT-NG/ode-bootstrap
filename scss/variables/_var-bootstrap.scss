@@ -28,21 +28,21 @@ $grid-breakpoints: (
 ) !default;
 
 // Components
-$border-radius-sm:                      5px ;
-$border-radius:                         5px ;
-$border-radius-lg:                      10px ;
+$border-radius-sm:                      5px;
+$border-radius:                         5px;
+$border-radius-lg:                      10px;
 
 // Typography
-$font-family-sans-serif:                "Roboto", sans-serif ;
-$font-size-base:                        1.6rem ;
-$line-height-base:                      1.6 ;
+$font-family-sans-serif:                "Roboto", sans-serif;
+$font-size-base:                        1.6rem;
+$line-height-base:                      1.6;
 
 // Tables
-$table-head-bg:                         $gray-100 ;
-$table-head-color:                      $gray-800 ;
+$table-head-bg:                         $gray-100;
+$table-head-color:                      $gray-800;
 
-$table-dark-color:                      $gray-100 ;
-$table-dark-bg:                         $gray-800 ;
+$table-dark-color:                      $gray-100;
+$table-dark-bg:                         $gray-800;
 
 // Forms
 $input-border-color:                    $gray-300 !default;
@@ -57,7 +57,7 @@ $form-floating-input-padding-b:         .5rem;
 // Dropdowns
 $dropdown-link-color:                   $gray-700 !default;
 $dropdown-link-hover-color:             darken($gray-900, 5%) !default;
-$dropdown-link-hover-bg:                rgba($secondary, 0.1) !default;
+$dropdown-link-hover-bg:                rgba($secondary, .1) !default;
 
 // Cards
 $card-spacer-y:                         25px !default; //? perso ou pas ?

@@ -1,52 +1,52 @@
 $avatar-size: 65px !default;
 
 .avatar {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  &--20 {
+    width: 20px;
+    height: 20px;
+  }
+  &--25 {
+    width: 25px;
+    height: 25px;
+  }
+  &--50 {
+    width: 50px;
+    height: 50px;
+  }
+  &--100 {
+    width: 100px;
+    height: 100px;
+  }
+
+  &-social {
+    position: relative;
+    @include circle($avatar-size);
+    .photo {
+      img {
+        @include avatar-image($avatar-size);
+      }
+    }
+
+    .circle {
+      @include have-child-in-middle();
+      @include circle($avatar-size/1.8);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: $avatar-size/3.5;
+      color: white;
+      transform: translate(20%, 20%);
+    }
+  }
+
+  &-link {
     display: inline-block;
-    vertical-align: middle;
-    border-radius: 50%;
-    &--20 {
-        width: 20px;
-        height: 20px;
+    cursor: pointer;
+    img {
+      @include avatar-image($avatar-size);
     }
-    &--25 {
-        width: 25px;
-        height: 25px;
-    }
-    &--50 {
-        width: 50px;
-        height: 50px;
-    }
-    &--100 {
-        width: 100px;
-        height: 100px;
-    }
-
-    &-social {
-        position: relative;
-        @include circle($avatar-size);
-        .photo {
-            img {
-                @include avatar-image($avatar-size);
-            }
-        }
-
-        .circle {
-            @include have-child-in-middle();
-            @include circle($avatar-size/1.8);
-            color: white;
-            font-size: $avatar-size/3.5;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transform: translate(20%, 20%);
-        }
-    }
-
-    &-link {
-        display: inline-block;
-        cursor: pointer;
-        img {
-            @include avatar-image($avatar-size);
-        }
-    }
+  }
 }

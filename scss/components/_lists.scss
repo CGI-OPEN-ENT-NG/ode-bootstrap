@@ -2,25 +2,25 @@
   &-header {
     display: flex;
     justify-content: space-between;
+    padding: 5px 15px;
     font-size: 1.4rem;
     font-weight: bold;
     color: $gray-600;
-    padding: 5px 15px;
     .list__item--preview {
       width: 40px;
     }
   }
   &-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 1px solid $gray-200;
-    margin: 5px 0;
+    justify-content: space-between;
     padding: 5px 15px;
-    border-radius: $border-radius-lg;
-    color: $gray-600;
+    margin: 5px 0;
     font-size: 1.4rem;
+    color: $gray-600;
     cursor: pointer;
+    border: 1px solid $gray-200;
+    border-radius: $border-radius-lg;
     @extend .transition-hover;
     &:hover {
       border-color: $secondary;
@@ -28,34 +28,34 @@
     }
     &:active,
     &.active {
+      background-color: rgba($secondary, .1);
       border-color: $secondary;
-      background-color: rgba($secondary, 0.1);
     }
     .list-item-preview {
       width: 40px;
-      vertical-align: middle;
       font-size: 1.6rem;
       text-align: center;
+      vertical-align: middle;
     }
     .list-title {
+      margin: 0;
+      overflow: hidden;
       font-size: 1.6rem;
       font-weight: bold;
       color: $gray-700;
-      margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
       text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .list-image {
       width: 30px;
       height: 30px;
-      border-radius: $border-radius;
       margin-right: 5px;
+      border-radius: $border-radius;
     }
     .list-status {
-      text-align: right;
-      font-size: 1.6rem;
       padding-right: 10px;
+      font-size: 1.6rem;
+      text-align: right;
       > * {
         margin: 0 5px;
       }
@@ -81,35 +81,35 @@
 @include media-breakpoint-down(sm) {
   .explorer__view.list {
     padding: 5px;
-    border-left-color: transparent;
     border-right-color: transparent;
     border-bottom-color: transparent;
+    border-left-color: transparent;
   }
   .list {
     &-header {
       display: none;
     }
-   &-item {
-     flex-wrap: wrap;
-     padding: 10px;
-     margin: 10px 0;
-     border-color: $gray-300;
-     .list-title {
-       width: calc(100% - 40px); // 100% - .list__item--preview
-     }
-     .list-status {
-       display: none;
-     }
-     .list-owner {
-       width: 55%;
-     }
-     .list-modification {
-       width: 45%;
-       text-align: right;
-     }
-     .list-modifiedBy {
-       display: none;
-     }
-   }
+    &-item {
+      flex-wrap: wrap;
+      padding: 10px;
+      margin: 10px 0;
+      border-color: $gray-300;
+      .list-title {
+        width: calc(100% - 40px); // 100% - .list__item--preview
+      }
+      .list-status {
+        display: none;
+      }
+      .list-owner {
+        width: 55%;
+      }
+      .list-modification {
+        width: 45%;
+        text-align: right;
+      }
+      .list-modifiedBy {
+        display: none;
+      }
+    }
   }
 }
