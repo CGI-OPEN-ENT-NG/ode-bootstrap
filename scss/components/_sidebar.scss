@@ -36,7 +36,7 @@ $sidebar-width: 250px;
   padding: 15px;
   font-size: 1.4rem;
   font-weight: bold;
-  color: $gray-600;
+  color: $gray-700;
   background-color: rgba($white, .7);
   box-shadow: -5px 5px 10px rgba(0, 0, 0, .05);
   &-title {
@@ -195,10 +195,10 @@ $sidebar-width: 250px;
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .sidebar {
     display: none;
-    width: 90%;
+    width: 400px;
     background-color: $white;
   }
   .sidebar.sidebar-mobile {
