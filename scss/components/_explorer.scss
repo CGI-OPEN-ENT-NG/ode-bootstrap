@@ -1,20 +1,22 @@
 .explorer {
-  &__header {
-    padding: 20px 20px 0;
+  &-header {
+    padding: 15px 15px 0;
     h2 {
       position: relative;
+      color: $gray-700;
+      font-size: 2rem;
       margin-bottom: 0;
       font-size: 1.375rem;
       color: $gray-700;
       small {
-        font-size: 70%;
+        font-size: 80%;
         color: $gray-600;
       }
     }
   }
-  &__view {
-    height: calc(100vh - 220px);
+  &-view {
     padding: 10px;
+    height: calc(100vh - 205px);
     overflow-x: auto;
     border-top: 1px solid $gray-200;
     scrollbar-width: thin;
@@ -24,14 +26,14 @@
 }
 @include media-breakpoint-down(md) {
   .explorer {
-    &__header {
-      padding: 15px 15px 0;
+    &-header {
+      padding: 10px 10px 0;
       h2 {
-        font-size: 1.125rem;
+        font-size: 1.4rem;
       }
     }
-    &__view {
-      height: calc(100vh - 110px);
+    &-view {
+      height: calc(100vh - 90px);
     }
   }
 }
