@@ -191,14 +191,18 @@ $sidebar-width: 250px;
 .sidebar.offcanvas {
   background-color: rgba($white, .95);
   .sidebar-tree {
-    max-height: calc(100vh - 205px);
+    max-height: calc(100vh - 130px);
   }
 }
 
 @include media-breakpoint-down(md) {
   .sidebar {
-    width: inherit;
+    display: none;
+    width: 90%;
     background-color: $white;
+  }
+  .sidebar.sidebar-mobile {
+    display: block;
   }
   .sidebar + .main-content {
     width: 100%;
