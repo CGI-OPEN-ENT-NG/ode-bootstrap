@@ -55,4 +55,8 @@
     }
 
   }
+  // A réécrire, mais le btn-circle de Julien ne colle pas à mon cas (les width en em, la font-size, la couleur, etc)
+  &-circular {
+    @include circle(32px);
+  }
 }
