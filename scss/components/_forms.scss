@@ -9,13 +9,14 @@
 }
 
 .input-searchbar {
-  .ic-search {
-    position: absolute;
-    top: 7px;
-    left: 30px;
-    color: $gray-500;
-  }
-  .ic-search + input {
-    padding-left: 40px;
-  }
+    position: relative;
+    .ic-search {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+        color: $gray-500;
+    }
+    .ic-search + input {
+        padding-left: 40px;
+    }
 }
