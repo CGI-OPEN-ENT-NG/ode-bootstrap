@@ -1,6 +1,4 @@
 /* Font Awesome */
-$fa-font-path:        "fonts/fa" !default;
-
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
@@ -10,7 +8,7 @@ $fa-font-path:        "fonts/fa" !default;
   font-family: "generic-icons";
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/generic-icons/generic-icons.woff");
+  src: url(#{$fonts-path}/generic-icons/generic-icons.woff);
 }
 
 html {

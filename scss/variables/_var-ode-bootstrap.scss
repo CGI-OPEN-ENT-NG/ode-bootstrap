@@ -5,3 +5,9 @@ $shadow-lightest:                       rgba(#000, .1);
 $shadow-light:                          rgba(#000, .3);
 $shadow:                                rgba(#000, .6);
 $shadow-dark:                           rgba(#000, .8);
+
+// FONT PATHS
+$fonts-path:          "fonts" !default;
+$fa-font-path:        "#{$fonts-path}/fa" !default;
+
+
