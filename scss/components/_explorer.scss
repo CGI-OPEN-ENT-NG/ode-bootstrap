@@ -15,7 +15,7 @@
   }
   &-view {
     padding: 10px;
-    height: calc(100vh - 205px);
+    height: calc(100vh - 210px);
     overflow-x: auto;
     border-top: 1px solid $gray-200;
     scrollbar-width: thin;
@@ -32,7 +32,7 @@
       }
     }
     &-view {
-      height: calc(100vh - 110px);
+      height: calc(100vh - 112px);
     }
   }
 }
