@@ -3,18 +3,18 @@ Personnalisation de certains paramètres de boostrap
 Ajouter l'option !default pour permettre la surcharge depuis les thèmes
 */
 // Body
-$body-bg:                               $gray-100;
-$body-color:                            $gray-700;
+$body-bg: $gray-100;
+$body-color: $gray-700;
 
-$text-light:                            $gray-300;
-$text-lightest:                         $white;
-$text-color:                            $gray-800;
+$text-light: $gray-300;
+$text-lightest: $white;
+$text-color: $gray-800;
 
-$link-decoration:                       none !default;
+$link-decoration: none !default;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio:   2.5 !default;
+$min-contrast-ratio: 2.4;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -24,46 +24,46 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 ) !default;
 
 // Components
-$border-radius-sm:                      5px;
-$border-radius:                         5px;
-$border-radius-lg:                      10px;
+$border-radius-sm: 6px;
+$border-radius: 6px;
+$border-radius-lg: 10px;
 
 // Typography
-$font-family-sans-serif:                "Roboto", sans-serif;
-$font-size-base:                        1.6rem;
-$line-height-base:                      1.6;
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-size-base: 1.6rem;
+$line-height-base: 1.6;
 
 // Tables
-$table-head-bg:                         $gray-100;
-$table-head-color:                      $gray-800;
+$table-head-bg: $gray-100;
+$table-head-color: $gray-800;
 
-$table-dark-color:                      $gray-100;
-$table-dark-bg:                         $gray-800;
+$table-dark-color: $gray-100;
+$table-dark-bg: $gray-800;
 
 // Forms
-$input-border-color:                    $gray-300 !default;
-$input-focus-border-color:              $secondary !default;
-$input-btn-padding-x:                   1rem;
-$form-floating-padding-x:               1rem;
-$form-floating-padding-y:               1.25rem;
-$form-floating-height:                  5rem;
-$form-floating-input-padding-t:         1.75rem;
-$form-floating-input-padding-b:         .5rem;
+$input-border-color: $gray-300 !default;
+$input-focus-border-color: $secondary !default;
+$input-btn-padding-x: 1rem;
+$form-floating-padding-x: 1rem;
+$form-floating-padding-y: 1.25rem;
+$form-floating-height: 5rem;
+$form-floating-input-padding-t: 1.75rem;
+$form-floating-input-padding-b: .5rem;
 
 // Dropdowns
-$dropdown-link-color:                   $gray-700 !default;
-$dropdown-link-hover-color:             darken($gray-900, 5%) !default;
-$dropdown-link-hover-bg:                rgba($secondary, .1) !default;
+$dropdown-link-color: $gray-700 !default;
+$dropdown-link-hover-color: darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg: rgba($secondary, .1) !default;
 
 // Cards
-$card-spacer-y:                         25px !default; //? perso ou pas ?
-$card-spacer-x:                         35px !default; //? perso ou pas ?
-$card-min-height:                       110px !default; //? perso ou pas ?
-$card-width:                            265px !default; //? perso ou pas ?
+$card-spacer-y: 25px !default; //? perso ou pas ?
+$card-spacer-x: 35px !default; //? perso ou pas ?
+$card-min-height: 110px !default; //? perso ou pas ?
+$card-width: 265px !default; //? perso ou pas ?
 
 // Tooltips
 // $tooltip-max-width:                     200px !default;
@@ -72,20 +72,26 @@ $card-width:                            265px !default; //? perso ou pas ?
 // $tooltip-opacity:                       .9 !default;
 
 // Badges
-$badge-font-size:                       80% !default; //? perso ou pas ?
+$badge-font-size: 80% !default; //? perso ou pas ?
 
 // Modals
-$modal-backdrop-bg:                 $gray-800 !default;
-$modal-backdrop-opacity:            .65 !default;
-$modal-footer-border-width:         0 !default;
-$modal-header-border-width:         0 !default;
-$modal-inner-padding:               1.5rem;
-$modal-content-border-width:        0;
+$modal-backdrop-bg: $gray-800 !default;
+$modal-backdrop-opacity: .65 !default;
+$modal-footer-border-width: 0 !default;
+$modal-header-border-width: 0 !default;
+$modal-inner-padding: 1.5rem;
+$modal-content-border-width: 0;
 
 // Offcanvas
-$offcanvas-padding-y:               1rem;
-$offcanvas-padding-x:               1rem;
+$offcanvas-padding-y: 1rem;
+$offcanvas-padding-x: 1rem;
 
 // Image thumbnails
-$thumbnail-bg:                          $white !default;
+$thumbnail-bg: $white !default;
 
+$toast-font-size: 1.4rem;
+$toast-padding-y: 15px;
+$toast-padding-x: 20px;
+$toast-background-color: #fff;
+$toast-header-background-color: #fff;
+$toast-max-width:                   450px;
