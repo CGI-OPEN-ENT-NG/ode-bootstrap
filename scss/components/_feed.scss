@@ -38,7 +38,7 @@ $feed-spacing: 20px !default;
     background: white;
     border-radius: 8px;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       padding-right: 50px;
     }
 
@@ -103,9 +103,10 @@ $feed-spacing: 20px !default;
       height: 100%;
       padding-left: 20px;
       background-color: white;
+      transition-duration: .2s;
       transform: translateX(120%);
       justify-self: stretch;
-      @include media-breakpoint-down(lg){
+      @include media-breakpoint-down(lg) {
         transform: translateX(100%);
       }
       @include media-breakpoint-down(md) {
@@ -156,11 +157,11 @@ $feed-spacing: 20px !default;
         }
       }
     }
-  }
 
-  &:hover {
-    .zone-tools {
-      transform: translateX(100%);
+    &:hover {
+      .zone-tools {
+        transform: translateX(101%);
+      }
     }
   }
 
