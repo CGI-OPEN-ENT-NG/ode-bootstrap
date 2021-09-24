@@ -9,7 +9,8 @@
 // --- IMPORT TOKENS ---
 // Contient tous nos éléments de style les plus petits et les plus insécables
 @import "tokens/display";
-@import "tokens/fonts"; 
+@import "tokens/fonts";
+
 @import "tokens/icons";
 @import "tokens/typography";
 
@@ -20,6 +21,7 @@
 @import "components/avatar";
 @import "components/buttons";
 @import "components/modal";
+@import "components/toast";
 @import "components/dominos";
 @import "components/dragndrop";
 @import "components/dropdowns";
