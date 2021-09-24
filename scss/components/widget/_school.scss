@@ -1,62 +1,66 @@
 //Widget établissement
 .widget-school {
-    &-header {
-        @include border-top-radius(6px);
-        padding: 30px $widget-padding-x;
-        color: white;
-        background-position: center;
-        background-size: cover;
+  &-header {
+    @include border-top-radius(6px);
+    position: relative;
+    padding: 30px $widget-padding-x;
+    font-size: 1.3em;
+    color: white;
+    background-position: center;
+    background-size: cover;
+
+    .name {
+      font-weight: 600;
+    }
+    .school {
+      &,
+      &-multiple {
         position: relative;
-        font-size: 1.3em;
+        font-size: .9em;
+        font-weight: 400;
+      }
+      &-multiple {
+        @include prepend-icon("\f150", 1.1em);
+        padding-left: 1.5em;
+        cursor: pointer;
+      }
 
-        .name {
-            font-weight: 600;
+      &-choice {
+        > div {
+          @include color-to($primary);
+          padding: 6px 20px;
+          cursor: pointer;
         }
-        .school {
-            &,
-            &-multiple {
-                position: relative;
-                font-weight: 400;
-                font-size: 0.9em;
-            }
-            &-multiple {
-                @include prepend-icon("\f150", 1.1em);
-                padding-left: 1.5em;
-                cursor: pointer;
-            }
-
-            &-choice {
-                > div {
-                    @include color-to($primary);
-                    padding: 6px 20px;
-                    cursor: pointer;
-                }
-            }
-        }
-        .avatar-list {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            transform: translateY(50%);
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0 $widget-padding-x;
-
-            @include media-breakpoint-down(xl) {
-                .avatar-link:nth-child(n + 4) {
-                    display: none;
-                }
-            }
-        }
+      }
     }
-    .button-list {
-        padding: $widget-padding-x;
-        padding-bottom: 0;
-        > * {
-            margin-bottom: 1em;
-            margin-right: 0.4em;
+    .avatar-list {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 $widget-padding-x;
+      transform: translateY(50%);
+
+      @include media-breakpoint-down(xl) {
+        .avatar-link:nth-child(n + 4) {
+          display: none;
         }
+      }
     }
+  }
+  .button-list {
+    padding: $widget-padding-x - 5;
+    padding-bottom: 0;
+    > * {
+      margin-bottom: 1em;
+
+
+      &:not(:last-child) {
+        margin-right: .4em;
+      }
+    }
+  }
 }
