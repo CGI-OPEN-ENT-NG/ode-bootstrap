@@ -1,42 +1,62 @@
 .widget-flash {
-    padding: $widget-padding-x;
-    background: $primary;
-    color: #fff;
-    position: relative;
+  position: relative;
+  padding: $widget-padding-x;
+  overflow: hidden;
+  color: #fff;
+  background: $primary;
 
-    &.red {
-        background: $red;
+  &.red {
+    background: $red;
+  }
+
+  &.orange {
+    background: $orange;
+  }
+
+  &.green {
+    background: $green;
+  }
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.grey-dark {
+    background: $gray-700;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    text-shadow: none;
+  }
+
+  .btn-read-more {
+    display: block;
+    height: 10px;
+
+    .btn-read-more-inner {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      padding: 5px;
+      font-size: .8em;
+      color: white;
+      text-align: center;
+      background: rgba(#000, .1);
+      @include background-color-to(rgba(#000, .2));
     }
+  }
 
-    &.orange {
-        background: $orange;
+  .flash-content {
+    padding-right: 1rem;
+
+    & > *:last-child {
+      margin-bottom: 0;
     }
-
-    &.green {
-        background: $green;
-    }
-
-    &.blue {
-        background: $blue;
-    }
-
-    &.grey-dark {
-        background: $gray-700;
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: #000;
-        text-shadow: none;
-    }
-
-    .flash-content {
-        padding-right: 1rem;
-
-        & > *:last-child {
-            margin-bottom: 0;
-        }
-    }
+  }
 }
