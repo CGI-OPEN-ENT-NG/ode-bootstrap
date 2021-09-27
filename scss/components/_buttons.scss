@@ -3,7 +3,7 @@
   z-index: 2;
   padding: 0 15px;
   font-size: 14px;
-  line-height: 2rem;
+  line-height: 2.4em;
   color: white;
   letter-spacing: 1.08px;
   border: 1px solid currentColor;
@@ -17,8 +17,8 @@
       background-color: $orange;
       border-color: $orange;
     }
-    background-color: $deepBlue;
-    border-color: $deepBlue;
+    background-color: $third;
+    border-color: $third;
   }
 
   &.btn-alt-outline {
@@ -27,9 +27,9 @@
       color: $orange;
       border-color: $orange;
     }
-    color: $deepBlue;
+    color: $third;
     background-color: transparent;
-    border: 1px solid $deepBlue;
+    border: 1px solid $third;
   }
 
   &-circle {
@@ -45,7 +45,7 @@
     margin-bottom: 1.5em;
     font-size: 2em;
     color: white;
-    background: $deepBlue;
+    background: $third;
 
     .label {
       position: absolute;

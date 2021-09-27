@@ -64,7 +64,12 @@ $-breakpoint-down: "md";
 
   &-nav {
     color: white;
-    background-color: $deepBlue;
+    background-color: $third;
+
+    @include media-breakpoint-up($-breakpoint-up) {
+      display: none;
+    }
+
     .list-trigger {
       display: flex;
       justify-content: space-around;
@@ -85,7 +90,7 @@ $-breakpoint-down: "md";
         flex: 1;
         align-self: center;
         padding: 15px;
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: center;
 
         &.on {

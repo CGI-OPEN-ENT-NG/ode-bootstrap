@@ -1,82 +1,100 @@
 .widget {
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05);
-    font-size: 14px;
-    margin-bottom: 2em;
-    //overflow: hidden;
+  margin-bottom: 2em;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, .05);
+  //overflow: hidden;
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
 
-    .meta {
-        color: $gray-700;
-        font-size: 0.8em;
-    }
+  .meta {
+    font-size: .8em;
+    color: $gray-700;
+  }
 
-    &-empty-message {
-        padding: 10px $widget-padding-x;
-        text-align: center;
-        display: block;
-        font-style: italic;
-        color: $gray-700;
-    }
+  &-empty-message {
+    display: block;
+    padding: 10px $widget-padding-x;
+    font-style: italic;
+    color: $gray-700;
+    text-align: center;
+  }
 
-    &-header {
-        padding: 15px $widget-padding-x 10px;
-        border-bottom: 1px solid #f5f5fb;
-        position: relative;
+  &-header {
+    position: relative;
+    padding: 15px $widget-padding-x 10px;
+    border-bottom: 1px solid $ghost;
 
-        .subtitle {
-            .seemore {
-                @include color-to($orange);
-                color: inherit;
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-
-            .seemore-text {
-                text-transform: initial;
-                font-weight: 400;
-                font-size: 0.8em;
-                padding-left: 0.5em;
-            }
-        }
-
-        .tools {
-            @include add-transitions(opacity);
-            opacity: 0;
-            position: absolute;
-            right: 10px;
-            top: 52%;
-            width: auto;
-            transform: translateY(-50%);
-            background: white;
-
-            .tool {
-                @include color-to($gray-700);
-                padding: 5px;
-                color: $gray-400;
-                text-decoration: none;
-            }
-
-            @include media-breakpoint-down(lg) {
-                display: none;
-            }
-        }
-
+    .subtitle {
+      .seemore {
+        @include color-to($orange);
+        color: inherit;
         &:hover {
-            .tools {
-                opacity: 1;
-            }
+          text-decoration: none;
         }
+      }
+
+      .seemore-text {
+        padding-left: .5em;
+        font-size: .8em;
+        font-weight: 400;
+        text-transform: initial;
+      }
     }
+
+    .tools {
+      @include add-transitions(opacity);
+      position: absolute;
+      top: 52%;
+      right: 10px;
+      width: auto;
+      background: white;
+      opacity: 0;
+      transform: translateY(-50%);
+
+      .tool {
+        @include color-to($gray-700);
+        padding: 5px;
+        color: $gray-400;
+        text-decoration: none;
+      }
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .tools {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-footer {
+
+    &-action {
+      text-align: center;
+
+      .link {
+        display: block;
+        padding: .4em 0;
+        font-size: $small-font-size;
+        color: $gray-600;
+        @include add-transitions(background-color, color){
+          color: $primary;
+          background-color: $ghost;
+        }
+      }
+    }
+  }
 }
