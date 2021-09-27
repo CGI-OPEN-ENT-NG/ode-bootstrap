@@ -62,36 +62,36 @@ $-breakpoint-down: "lg";
     }
   }
 
-    &-nav {
-        background-color: $deepBlue;
-        color: white;
+  &-nav {
+    color: white;
+    background-color: $third;
 
-        @include media-breakpoint-up($-breakpoint-up) {
-            display: none;
+    @include media-breakpoint-up($-breakpoint-up) {
+      display: none;
+    }
+
+    .list-trigger {
+      display: flex;
+      justify-content: space-around;
+      overflow: hidden;
+      .trigger {
+        @include add-before-layer() {
+          @include add-transitions(opacity, transform);
+          top: 50%;
+          z-index: -1;
+          height: auto;
+          padding-top: 100%;
+          background: $cyan;
+          border-radius: 50%;
+          opacity: 0;
+          transform: translateY(-50%) scale(1.1);
         }
-
-        .list-trigger {
-            display: flex;
-            justify-content: space-around;
-            overflow: hidden;
-            .trigger {
-                @include add-before-layer() {
-                    @include add-transitions(opacity, transform);
-                    background: $cyan;
-                    z-index: -1;
-                    border-radius: 50%;
-                    padding-top: 100%;
-                    height: auto;
-                    top: 50%;
-                    transform: translateY(-50%) scale(1.1);
-                    opacity: 0;
-                }
-                flex: 1;
-                align-self: center;
-                text-align: center;
-                padding: 15px;
-                font-size: 1.1rem;
-                z-index: 2;
+        z-index: 2;
+        flex: 1;
+        align-self: center;
+        padding: 15px;
+        font-size: 1.1rem;
+        text-align: center;
 
         &.on {
           &::before {
