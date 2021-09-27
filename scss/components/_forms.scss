@@ -1,21 +1,23 @@
 .input-group {
-  .btn {
-    box-shadow: none !important;
-  }
+    .btn {
+        box-shadow: none !important;
+    }
 }
 
 .form-control::placeholder {
-  font-style: italic;
+    font-style: italic;
 }
 
 .input-searchbar {
     position: relative;
+
     .ic-search {
         position: absolute;
-        left: 20px;
         top: 5px;
+        left: 20px;
         color: $gray-500;
     }
+
     .ic-search + input {
         padding-left: 40px;
     }

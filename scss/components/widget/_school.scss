@@ -1,66 +1,73 @@
 //Widget établissement
 .widget-school {
-  &-header {
-    @include border-top-radius(6px);
-    position: relative;
-    padding: 30px $widget-padding-x;
-    font-size: 1.3em;
-    color: white;
-    background-position: center;
-    background-size: cover;
+    &-header {
+        @include border-top-radius(6px);
 
-    .name {
-      font-weight: 600;
-    }
-    .school {
-      &,
-      &-multiple {
         position: relative;
-        font-size: .9em;
-        font-weight: 400;
-      }
-      &-multiple {
-        @include prepend-icon("\f150", 1.1em);
-        padding-left: 1.5em;
-        cursor: pointer;
-      }
+        padding: 30px $widget-padding-x;
+        font-size: 1.3em;
+        color: #fff;
+        background-position: center;
+        background-size: cover;
 
-      &-choice {
-        > div {
-          @include color-to($primary);
-          padding: 6px 20px;
-          cursor: pointer;
+        .name {
+            font-weight: 600;
         }
-      }
-    }
-    .avatar-list {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 $widget-padding-x;
-      transform: translateY(50%);
 
-      @include media-breakpoint-down(xl) {
-        .avatar-link:nth-child(n + 4) {
-          display: none;
+        .school {
+            &,
+            &-multiple {
+                position: relative;
+                font-size: 0.9em;
+                font-weight: 400;
+            }
+
+            &-multiple {
+                @include prepend-icon("\f150", 1.1em);
+
+                padding-left: 1.5em;
+                cursor: pointer;
+            }
+
+            &-choice {
+                > div {
+                    @include color-to($primary);
+
+                    padding: 6px 20px;
+                    cursor: pointer;
+                }
+            }
         }
-      }
-    }
-  }
-  .button-list {
-    padding: $widget-padding-x - 5;
-    padding-bottom: 0;
-    > * {
-      margin-bottom: 1em;
 
+        .avatar-list {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 $widget-padding-x;
+            transform: translateY(50%);
 
-      &:not(:last-child) {
-        margin-right: .4em;
-      }
+            @include media-breakpoint-down(xl) {
+                .avatar-link:nth-child(n + 4) {
+                    display: none;
+                }
+            }
+        }
     }
-  }
+
+    .button-list {
+        padding: $widget-padding-x - 5;
+        padding-bottom: 0;
+
+        > * {
+            margin-bottom: 1em;
+
+            &:not(:last-child) {
+                margin-right: 0.4em;
+            }
+        }
+    }
 }

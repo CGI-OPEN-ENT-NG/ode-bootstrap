@@ -1,100 +1,107 @@
 .widget {
-  margin-bottom: 2em;
-  font-size: 1.4rem;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, .05);
-  //overflow: hidden;
+    margin-bottom: 2em;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 40px 0 rgba(0, 0, 0, 0.05);
+    //overflow: hidden;
 
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
-
-  .meta {
-    font-size: .8em;
-    color: $gray-700;
-  }
-
-  &-empty-message {
-    display: block;
-    padding: 10px $widget-padding-x;
-    font-style: italic;
-    color: $gray-700;
-    text-align: center;
-  }
-
-  &-header {
-    position: relative;
-    padding: 15px $widget-padding-x 10px;
-    border-bottom: 1px solid $ghost;
-
-    .subtitle {
-      .seemore {
-        @include color-to($orange);
-        color: inherit;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      .seemore-text {
-        padding-left: .5em;
-        font-size: .8em;
-        font-weight: 400;
-        text-transform: initial;
-      }
-    }
-
-    .tools {
-      @include add-transitions(opacity);
-      position: absolute;
-      top: 52%;
-      right: 10px;
-      width: auto;
-      background: white;
-      opacity: 0;
-      transform: translateY(-50%);
-
-      .tool {
-        @include color-to($gray-700);
-        padding: 5px;
-        color: $gray-400;
+    a {
         text-decoration: none;
-      }
-
-      @include media-breakpoint-down(lg) {
-        display: none;
-      }
     }
 
-    &:hover {
-      .tools {
-        opacity: 1;
-      }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
     }
-  }
 
-  &-footer {
+    .meta {
+        font-size: 0.8em;
+        color: $gray-700;
+    }
 
-    &-action {
-      text-align: center;
-
-      .link {
+    &-empty-message {
         display: block;
-        padding: .4em 0;
-        font-size: $small-font-size;
-        color: $gray-600;
-        @include add-transitions(background-color, color){
-          color: $primary;
-          background-color: $ghost;
-        }
-      }
+        padding: 10px $widget-padding-x;
+        font-style: italic;
+        color: $gray-700;
+        text-align: center;
     }
-  }
+
+    &-header {
+        position: relative;
+        padding: 15px $widget-padding-x 10px;
+        border-bottom: 1px solid $ghost;
+
+        .subtitle {
+            .seemore {
+
+                @include color-to($orange);
+
+                color: inherit;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .seemore-text {
+                padding-left: 0.5em;
+                font-size: 0.8em;
+                font-weight: 400;
+                text-transform: initial;
+            }
+        }
+
+        .tools {
+
+            @include add-transitions(opacity);
+
+            position: absolute;
+            top: 52%;
+            right: 10px;
+            width: auto;
+            background: #fff;
+            opacity: 0;
+            transform: translateY(-50%);
+
+            .tool {
+
+                @include color-to($gray-700);
+
+                padding: 5px;
+                color: $gray-400;
+                text-decoration: none;
+            }
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            .tools {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-footer {
+        &-action {
+            text-align: center;
+
+            .link {
+                display: block;
+                padding: 0.4em 0;
+                font-size: $small-font-size;
+                color: $gray-600;
+
+                @include add-transitions(background-color, color) {
+                    color: $primary;
+                    background-color: $ghost;
+                }
+            }
+        }
+    }
 }

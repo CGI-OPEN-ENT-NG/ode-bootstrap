@@ -1,11 +1,12 @@
 .widget-featured-news {
     //Widget actualité à la une
+
     .featured-news {
         display: flex;
 
         .zone-text {
-            padding: $widget-padding-x;
             flex: 1;
+            padding: $widget-padding-x;
 
             .title {
                 font-size: 1.4em;
@@ -15,13 +16,15 @@
         }
 
         .zone-image {
+
             @include add-overlay(0.5);
-            @include have-child-in-middle;
+            @include have-child-in-middle ();
+
             position: relative;
             width: 30%;
-            border-bottom-left-radius: 120px;
-            overflow: hidden;
             padding: $widget-padding-x;
+            overflow: hidden;
+            border-bottom-left-radius: 120px;
 
             @include media-breakpoint-down(xl) {
                 min-width: 220px;
@@ -35,18 +38,22 @@
                 object-position: center center;
             }
         }
+
         @media (max-width: 1300px) and (min-width: 992px) {
             flex-direction: column;
+
             .zone-image {
                 width: 100%;
-                border-bottom-left-radius: 0px;
+                border-bottom-left-radius: 0;
             }
         }
+
         @media (max-width: 500px) {
             flex-direction: column;
+
             .zone-image {
                 width: 100%;
-                border-bottom-left-radius: 0px;
+                border-bottom-left-radius: 0;
             }
         }
     }

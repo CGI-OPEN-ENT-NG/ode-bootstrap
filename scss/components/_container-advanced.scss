@@ -1,104 +1,115 @@
-$-breakpoint-up: "lg";
-$-breakpoint-down: "md";
+$breakpoint-up: "lg";
+$breakpoint-down: "lg";
 
 .container-advanced {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-  &-wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1920- (2 * 20) * 1px;
-    margin: 20px auto;
-    @include media-breakpoint-down($-breakpoint-down) {
-      width: 300vw;
-      max-width: unset;
-      @include add-transitions(transform);
-    }
-  }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1920px - (2 * 20) * 1px;
+        margin: 20px auto;
 
-  &-left {
-    flex: 1;
-    order: 1;
-    margin: 0 20px;
-    @include media-breakpoint-up($-breakpoint-up) {
-      max-width: 350px;
-    }
-  }
+        @include media-breakpoint-down($breakpoint-down) {
+            width: 300vw;
+            max-width: unset;
 
-  &-center {
-    flex: 1;
-    order: 2;
-    margin: 0 20px;
-    @include media-breakpoint-up($-breakpoint-up) {
-      max-width: 45%;
-    }
-  }
-  &-right {
-    flex: 1;
-    order: 3;
-    margin: 0 20px;
-    @include media-breakpoint-up($-breakpoint-up) {
-      max-width: 350px;
-    }
-  }
-
-  @include media-breakpoint-down($-breakpoint-down) {
-    &.focus-left {
-      .container-advanced-wrapper {
-        transform: translateX(0);
-      }
-    }
-    &.focus-right {
-      .container-advanced-wrapper {
-        transform: translateX(100/3 * 2% * -1);
-      }
-    }
-    &.focus-center {
-      .container-advanced-wrapper {
-        transform: translateX(100/3 * 1% * -1);
-      }
-    }
-  }
-
-  &-nav {
-    color: white;
-    background-color: $third;
-
-    @include media-breakpoint-up($-breakpoint-up) {
-      display: none;
-    }
-
-    .list-trigger {
-      display: flex;
-      justify-content: space-around;
-      overflow: hidden;
-      .trigger {
-        @include add-before-layer() {
-          @include add-transitions(opacity, transform);
-          top: 50%;
-          z-index: -1;
-          height: auto;
-          padding-top: 100%;
-          background: $cyan;
-          border-radius: 50%;
-          opacity: 0;
-          transform: translateY(-50%) scale(1.1);
+            @include add-transitions(transform);
         }
-        z-index: 2;
+    }
+
+    &-left {
         flex: 1;
-        align-self: center;
-        padding: 15px;
-        font-size: 1.1rem;
-        text-align: center;
+        order: 1;
+        margin: 0 20px;
 
-        &.on {
-          &::before {
-            opacity: 1;
-          }
+        @include media-breakpoint-up($breakpoint-up) {
+            max-width: 350px;
         }
-      }
     }
-  }
+
+    &-center {
+        flex: 1;
+        order: 2;
+        margin: 0 20px;
+
+        @include media-breakpoint-up($breakpoint-up) {
+            max-width: 45%;
+        }
+    }
+
+    &-right {
+        flex: 1;
+        order: 3;
+        margin: 0 20px;
+
+        @include media-breakpoint-up($breakpoint-up) {
+            max-width: 350px;
+        }
+    }
+
+    @include media-breakpoint-down($breakpoint-down) {
+        &.focus-left {
+            .container-advanced-wrapper {
+                transform: translateX(0);
+            }
+        }
+
+        &.focus-right {
+            .container-advanced-wrapper {
+                transform: translateX(100 / 3 * 2% * -1);
+            }
+        }
+
+        &.focus-center {
+            .container-advanced-wrapper {
+                transform: translateX(100 / 3 * 1% * -1);
+            }
+        }
+    }
+
+    &-nav {
+        color: #fff;
+        background-color: $third;
+
+        @include media-breakpoint-up($breakpoint-up) {
+            display: none;
+        }
+
+        .list-trigger {
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+
+            .trigger {
+                @include add-before-layer() {
+                    @include add-transitions(opacity, transform);
+
+                    top: 50%;
+                    z-index: -1;
+                    height: auto;
+                    padding-top: 100%;
+                    background: $cyan;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transform: translateY(-50%) scale(1.1);
+                }
+
+                z-index: 2;
+                flex: 1;
+                align-self: center;
+                padding: 15px;
+                font-size: 1.1rem;
+                text-align: center;
+
+                &.on {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
