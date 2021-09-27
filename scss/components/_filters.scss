@@ -1,71 +1,70 @@
 .filters {
-  .btn {
-    color: $gray-600;
-    box-shadow: none;
-    &.inactive {
-      color: $gray-400;
-    }
-  }
+    .btn {
+        color: $gray-600;
+        box-shadow: none;
 
-  &.filters-chips {
+        &.inactive {
+            color: $gray-400;
+        }
+    }
+}
+
+.filters-chips {
     margin-bottom: 1em;
 
     &:hover {
-      color: unset;
-      background-color: transparent;
+        color: unset;
+        background-color: transparent;
     }
 
     .filter {
-      @include add-transitions(background-color, color);
-      position: relative;
-      display: inline-block;
-      padding: 3px 15px;
-      overflow: hidden;
-      font-weight: 400;
-      text-decoration: none;
-      cursor: pointer;
-      background-color: white;
-      border: 1px solid currentColor;
-      border-radius: 20px;
+        position: relative;
+        display: inline-block;
+        padding: 3px 15px;
+        overflow: hidden;
+        font-weight: 400;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid currentColor;
+        border-radius: 20px;
 
-      &.visible {
-        display: block;
-      }
+        @include add-transitions(background-color, color);
 
-      &.active {
-
-        //@include append-icon("\f00d", 1em, 10px, #fff);
-        background-color: currentColor !important;
-        //color: #fff;
-        //padding-right: 40px!important;
-        .icon,
-        .label {
-          color: #fff;
+        &.visible {
+            display: block;
         }
-      }
 
-      .hidden-checkbox {
-        display: none;
-      }
+        &.active {
+            background-color: currentColor !important;
 
-      .icon {
-        @include square(1.5em);
-        position: relative;
-        z-index: 2;
-        display: inline-block;
-        color: inherit;
-        vertical-align: middle;
-      }
+            .icon,
+            .label {
+                color: #fff;
+            }
+        }
 
-      .label {
-        position: relative;
-        z-index: 2;
-        display: inline-block;
-        padding-top: 2px;
-        font-size: 1em;
-        vertical-align: middle;
-      }
+        .hidden-checkbox {
+            display: none;
+        }
 
+        .icon {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            color: inherit;
+            vertical-align: middle;
+
+            @include square(1.5em);
+        }
+
+        .label {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding-top: 2px;
+            font-size: 1em;
+            vertical-align: middle;
+        }
     }
-  }
 }

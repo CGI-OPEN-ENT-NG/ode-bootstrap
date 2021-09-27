@@ -1,118 +1,123 @@
 .sticky-toolbox {
-  @include add-transitions(transform);
-  position: fixed;
-  top: 100px;
-  right: 0;
-  z-index: 10;
-  color: white;
-  transform: translateX(100%);
-
-  &.open {
-    transform: translateX(0);
-  }
-
-  .link-tool {
-    position: absolute;
-    width: 50px;
-    padding: 5px 10px;
-    font-size: 1.5em;
-    color: white;
-    cursor: pointer;
-    background: $primary;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    transform: translate(-100%, 0);
-  }
-
-  .content {
-    width: 400px;
-    height: 100%;
-    padding: 20px 30px;
-    background: $third;
-  }
-
-  .title {
-    margin: 0 0 10px;
-    font-weight: bold;
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-
-  .bt {
-    @include background-color-to(rgba($cyan, .6));
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    background: $cyan;
-    border-radius: 0;
-
-    &.selected {
-      background: $primary;
-    }
-  }
-
-  [class*="buttons-"] {
-    margin-right: -5px;
-    margin-left: -5px;
-
-    > .col,
-    > [class*="col-"] {
-      padding-right: 5px;
-      padding-left: 5px;
-      margin-bottom: 10px;
-    }
-  }
-
-  .buttons-theme {
-    .bt {
-      padding: 20px 10px;
-    }
-  }
-
-  .buttons-widget {
-    .bt {
-      .inner {
-        position: relative;
-        display: block;
-        padding-top: 100%;
-      }
-      i {
-        @include have-child-in-middle();
-        @include square(100%);
-        position: absolute;
-        top: 0;
-        font-size: 2em;
-      }
-    }
-  }
-
-  .bt-lang {
-    margin-bottom: 15px;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 10;
     color: #fff;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    transform: translateX(100%);
 
-    .flag {
-      @include add-transitions(filter);
-      // width: 60px;
-      height: auto;
-      margin: 0 auto;
-      filter: saturate(0);
+    @include add-transitions(transform);
+
+    &.open {
+        transform: translateX(0);
     }
 
-    &.selected {
-      .flag {
-        filter: saturate(1);
-      }
+    .link-tool {
+        position: absolute;
+        width: 50px;
+        padding: 5px 10px;
+        font-size: 1.5em;
+        color: #fff;
+        cursor: pointer;
+        background: $primary;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: translate(-100%, 0);
     }
 
-    &:hover:not(.selected) {
-      .flag {
-        filter: saturate(.3);
-      }
+    .content {
+        width: 400px;
+        height: 100%;
+        padding: 20px 30px;
+        background: $third;
     }
-  }
+
+    .title {
+        margin: 0 0 10px;
+        font-weight: 700;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    .bt {
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        background: $cyan;
+        border-radius: 0;
+
+        @include background-color-to(rgba($cyan, 0.6));
+
+        &.selected {
+            background: $primary;
+        }
+    }
+
+    [class*="buttons-"] {
+        margin-right: -5px;
+        margin-left: -5px;
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .buttons-theme {
+        .bt {
+            padding: 20px 10px;
+        }
+    }
+
+    .buttons-widget {
+        .bt {
+            .inner {
+                position: relative;
+                display: block;
+                padding-top: 100%;
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                font-size: 2em;
+
+                @include have-child-in-middle();
+                @include square(100%);
+            }
+        }
+    }
+
+    .bt-lang {
+        margin-bottom: 15px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        .flag {
+            height: auto;
+            margin: 0 auto;
+            filter: saturate(0);
+
+            @include add-transitions(filter);
+        }
+
+        &.selected {
+            .flag {
+                filter: saturate(1);
+            }
+        }
+
+        &:hover:not(.selected) {
+            .flag {
+                filter: saturate(0.3);
+            }
+        }
+    }
 }

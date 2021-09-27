@@ -1,47 +1,50 @@
 .widget-calendar {
     //Widget Calendar
+
     .day-list {
         margin: 10px $widget-padding-x;
     }
-    
+
     .day-item {
-        padding-bottom: 0.5em;
         position: relative;
+        padding-bottom: 0.5em;
 
         &-title {
             padding-left: 20px;
+
             @include prepend-icon("\f111", 0.5em, 0, $orange);
         }
 
         &::before {
-            content: "";
-            display: block;
             position: absolute;
-            height: 100%;
-            width: 1px;
-            background: #c8c8c8;
             top: 0.7em;
             left: 0.25em;
+            display: block;
+            width: 1px;
+            height: 100%;
+            content: "";
+            background: #c8c8c8;
         }
+
         &:last-child {
             &::before {
                 content: none;
             }
         }
     }
-    .moment-list {
-    }
+
     .moment-item {
-        padding-left: 25px;
-        padding-bottom: 0.75em;
         display: flex;
         align-items: start;
+        padding-bottom: 0.75em;
+        padding-left: 25px;
 
         .icon,
         .hour {
-            margin-right: 0.75em;
             width: 1em;
+            margin-right: 0.75em;
         }
+
         .hour {
             width: 2.5em;
             text-align: right;
@@ -51,6 +54,4 @@
             flex: 1;
         }
     }
-
-    
 }

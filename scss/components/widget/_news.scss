@@ -1,7 +1,10 @@
 .widget-news {
     //Widget Actualités
+
     .news-row {
+
         @include background-color-to($gray-100, 0.4s, $easeOutQuad);
+
         display: flex;
         align-items: center;
         padding: 10px $widget-padding-x;
@@ -9,10 +12,10 @@
 
         &-image {
             width: 55px;
-            transform-origin: center;
-            transition: transform 0.4s $easeInOutQuad;
             padding-right: 15px;
             text-align: center;
+            transition: transform 0.4s $easeInOutQuad;
+            transform-origin: center;
 
             img {
                 max-width: 100%;
