@@ -140,73 +140,6 @@ $sidebar-width: 250px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-// .sidebar-mobile {
-//   margin-right: auto;
-//   display: none;
-//   .sidebar {
-//     display: block;
-//     position: fixed;
-//     width: 100%;
-//     left: 0;
-//     right: 0;
-//     top: 46px;
-//     bottom: 0;
-//     background-color: rgba($white, 0.95);
-//     visibility: hidden;
-//     opacity: 0;
-//     z-index: -1;
-//     @extend .transition-hover;
-//     &-tree {
-//       max-height: calc(100vh - 200px);
-//     }
-//     &-close {
-//       display: flex;
-//       justify-content: flex-end;
-//       padding-bottom: 5px;
-//       i {
-//         display: inline-block;
-//         width: 25px;
-//         height: 25px;
-//         line-height: 25px;
-//         text-align: center;
-//         border-radius: 50%;
-//         background-color: $gray-600;
-//         color: white;
-//       }
-//     }
-//   }
-//   input[type=checkbox] {
-//     display: block;
-//     width: 100px;
-//     height: 30px;
-//     position: absolute;
-//     top: -2px;
-//     left: -4px;
-//     cursor: pointer;
-//     opacity: 0; /* hide this */
-//     z-index: 2; /* and place it over the hamburger */
-//     -webkit-touch-callout: none;
-//   }
-//   input[type=checkbox]:checked ~ .sidebar {
-//     visibility: visible;
-//     opacity: 1;
-//     z-index: 1000;
-//     @extend .transition-hover;
-//   }
-//   .ic-burger {
-//     color: $gray-600;
-//     font-size: 1rem;
-//   }
-//   .input-searchbar {
-//     @extend .p-0;
-//     @extend .mb-2;
-//     .ic-search {
-//       left: 15px;
-//       top: 9px;
-//     }
-//   }
-// }
-
 .sidebar.offcanvas {
     z-index: 1060; // Z-index augmenté pour que ça passe au dessus.
     background-color: rgba($white, 0.95);
@@ -231,4 +164,12 @@ $sidebar-width: 250px;
         width: 100%;
         border-radius: $border-radius;
     }
+}
+
+// Sidebar in modal
+.modal {
+  .sidebar {
+    padding: 15px 0;
+    box-shadow: none;
+  }
 }
