@@ -72,9 +72,15 @@ Pour une correction du formattage à l'enregistrement, ajouter au ficher de conf
 
 ## Documentation
 
-A documentation listing all available components is available [here](docs/index.html). You can preview all of them and copy source code.
-
-Below all variables and their meaning:
-
 TODO
+Regles de nommage
 
+Ajout d'un composant
+
+Surcharge composant
+
+Ajout d'une variable
+
+Ajout d'une mixin
+
+Ajout d'un icone
