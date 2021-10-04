@@ -183,41 +183,6 @@ $overlay-width: $domino-width / 1.5;
     }
 }
 
-.domino.blog {
-    .domino-image {
-        color: $indigo;
-        background-color: rgba($indigo, 0.1);
-    }
-}
-
-.domino.exercizer {
-    .domino-image {
-        color: $purple;
-        background-color: rgba($purple, 0.1);
-    }
-}
-
-.domino.timelinegenerator {
-    .domino-image {
-        color: $yellow;
-        background-color: rgba($yellow, 0.1);
-    }
-}
-
-.domino.rack {
-    .domino-image {
-        color: $red;
-        background-color: rgba($red, 0.1);
-    }
-}
-
-.domino.homeworks {
-    .domino-image {
-        color: $teal;
-        background-color: rgba($teal, 0.1);
-    }
-}
-
 .dominos .domino {
     width: calc(16.667% - 20px);
     max-width: $domino-width;

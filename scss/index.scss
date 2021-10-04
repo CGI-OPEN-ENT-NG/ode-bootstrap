@@ -16,7 +16,6 @@
 
 // --- IMPORT COMPONENTS ---
 // Contient tous nos composants visuels, simple ou complexe
-// A déplacer dans explorer.scss ? ça dépend si on veut faire une page css par application, pour éviter d'alourdir le CSS de manière inutile
 @import "components/container-advanced";
 @import "components/avatar";
 @import "components/buttons";
@@ -31,9 +30,10 @@
 @import "components/filters";
 @import "components/forms";
 @import "components/lists";
-// @import "components/navbar";
+@import "components/media-library";
 @import "components/search";
 @import "components/sidebar";
 @import "components/sticky-toolbox";
+@import "components/tables";
 @import "components/toaster";
 @import "components/widget/";

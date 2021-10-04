@@ -1,14 +1,23 @@
 // Drag & drop component
+.drag-n-drop {
+  &-item {
+    .draggable {} // élement déplacable
+    .no-draggable {} // élément non déplacable
+  }
+  &-area {
+    .draggable {} // Reçoit le drag
+    .no-draggable {} // Ne peux pas recevoir le drag
+  }
+}
 
-.dragndrop {
+.drop-zone {
+  padding: 75px;
+  border: 2px dashed $gray-300;
+  background-color: rgba($gray-100, 0.25);
+}
 
-    &__item {
-        &--draggable {} // élement déplacable
-        &--nodraggable {} // élément non déplacable
-    }
-
-    &__area {
-        &--draggable {} // Reçoit le drag
-        &--nodraggable {} // Ne peux pas recevoir le drag
-    }
+@include media-breakpoint-down(md) {
+  .drop-zone {
+    padding: 25px;
+  }
 }
