@@ -32,6 +32,7 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-200 !default;
+$medium: $gray-500 !default;
 $dark: $gray-700 !default;
 $ghost: #f5f5fb !default;
 
@@ -44,6 +45,7 @@ $theme-colors: (
     "warning": $warning,
     "danger": $danger,
     "light": $light,
+    "medium": $medium,
     "dark": $dark,
     "ghost": $ghost
 ) !default;

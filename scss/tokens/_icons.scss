@@ -1,7 +1,7 @@
 // Initialize good style and good font on all icons
-.ic,
+[class*="ic-"],
 .ic-app {
-    font-family: generic-icons;
+    font-family: "generic-icons";
     font-style: normal;
     font-weight: 400;
 }
@@ -19,7 +19,7 @@
 
 // Icons editor
 .color-app {
-    @each $app, $data in $applications {
+    @each $app, $data in $icons-applications {
         &-#{$app} {
             color: map-get($data, "color");
         }
@@ -27,7 +27,7 @@
 }
 
 .bg-app {
-    @each $app, $data in $applications {
+    @each $app, $data in $icons-applications {
         &-#{$app} {
             background-color: map-get($data, "color");
         }
@@ -35,7 +35,7 @@
 }
 
 .ic-app {
-    @each $app, $data in $applications {
+    @each $app, $data in $icons-applications {
         &.#{$app}, &.#{$app}-large {
             &::before {
                 content: map-get($data, "glyph");
