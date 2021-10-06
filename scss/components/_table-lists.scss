@@ -1,4 +1,4 @@
-.list {
+.table-list {
 
     &-header {
         display: flex;
@@ -7,8 +7,12 @@
         font-size: 1.4rem;
         font-weight: bold;
         color: $gray-600;
+        
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
 
-        .list__item--preview {
+        .table-list-item-preview {
             width: 40px;
         }
     }
@@ -32,21 +36,31 @@
 
             @extend .transition-hover-fast;
         }
-
+        
         &:active,
         &.active {
             background-color: rgba($secondary, 0.1);
             border-color: $secondary;
         }
 
-        .list-item-preview {
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: 10px 0;
+            border-color: $gray-300;
+        }
+
+        .table-list-item-preview {
             width: 40px;
             font-size: 1.6rem;
             text-align: center;
             vertical-align: middle;
+            @include media-breakpoint-down(sm) {
+                width: 30px;
+            }
         }
 
-        .list-title {
+        .table-list-title {
             margin: 0;
             overflow: hidden;
             font-size: 1.6rem;
@@ -56,14 +70,14 @@
             white-space: nowrap;
         }
 
-        .list-image {
+        .table-list-image {
             width: 30px;
             height: 30px;
             margin-right: 5px;
             border-radius: $border-radius;
         }
 
-        .list-status {
+        .table-list-status {
             padding-right: 10px;
             font-size: 1.6rem;
             text-align: right;
@@ -73,69 +87,54 @@
             }
         }
 
-        .list-modifiedBy {
+        .table-list-modifiedBy {
             font-size: 1.2rem;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
         }
     }
 
     &-title {
         width: calc(100% - 450px);
+        @include media-breakpoint-down(sm) {
+            width: calc(100% - 40px); // 100% - .list-item-preview
+        }
     }
 
     &-status {
         width: 75px;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 
     &-owner {
         width: 200px;
+        @include media-breakpoint-down(sm) {
+            width: 55%;
+            .avatar {
+                display: none;
+            }
+        }
     }
 
     &-modification {
         width: 175px;
+        @include media-breakpoint-down(sm) {
+            width: 45%;
+            text-align: right;
+        }
     }
 }
 
 @include media-breakpoint-down(sm) {
 
-    .explorer__view.list {
+    .explorer-view.table-list {
         padding: 5px;
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-left-color: transparent;
     }
-
-    .list {
-
-        &-header {
-            display: none;
-        }
-
-        &-item {
-            flex-wrap: wrap;
-            padding: 10px;
-            margin: 10px 0;
-            border-color: $gray-300;
-
-            .list-title {
-                width: calc(100% - 40px); // 100% - .list__item--preview
-            }
-
-            .list-status {
-                display: none;
-            }
-
-            .list-owner {
-                width: 55%;
-            }
-
-            .list-modification {
-                width: 45%;
-                text-align: right;
-            }
-
-            .list-modifiedBy {
-                display: none;
-            }
-        }
-    }
 }
+
