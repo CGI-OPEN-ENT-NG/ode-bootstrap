@@ -15,7 +15,7 @@ $link-decoration: none !default;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio: 2.4 !default;
+$min-contrast-ratio: 1.75 !default;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -54,6 +54,9 @@ $dropdown-link-color: $gray-700 !default;
 $dropdown-link-hover-color: darken($gray-900, 5%) !default;
 $dropdown-link-hover-bg: rgba($secondary, 0.1) !default;
 
+// Image thumbnails
+$thumbnail-bg: $white !default;
+
 // Cards
 $card-spacer-y: 25px !default;
 $card-spacer-x: 35px !default;
@@ -71,9 +74,11 @@ $modal-content-border-width: 0 !default;
 // Offcanvas
 $offcanvas-padding-y: 1rem !default;
 $offcanvas-padding-x: 1rem !default;
+$offcanvas-vertical-height: auto !default;
 
 // Image thumbnails
 $thumbnail-bg: $white !default;
+$thumbnail-padding: .5rem!default;
 
 // Toast
 $toast-font-size: 1.4rem !default;
@@ -82,3 +87,21 @@ $toast-padding-x: 20px !default;
 $toast-background-color: #fff !default;
 $toast-header-background-color: #fff !default;
 $toast-max-width: 450px !default;
+
+// Table
+$table-color: $gray-700 !default;
+$table-striped-bg: rgba($gray-100, .25) !default;
+$table-border-color: $gray-100 !default;
+$table-cell-padding-y: 0.75rem !default;
+$table-cell-padding-x: 0.75rem !default;
+$table-cell-padding-y-sm: .5rem !default;
+$table-cell-padding-x-sm: .5rem !default;
+$table-hover-bg: $gray-100 !default;
+
+// Tabs
+$nav-link-color: $secondary !default;
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-active-color: $gray-600 !default;
+
+// Z-index
+$zindex-offcanvas: 1050 !default;
