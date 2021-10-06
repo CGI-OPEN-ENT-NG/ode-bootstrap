@@ -1,44 +1,14 @@
-/* DOCUMENTATION
-<aside class="sidebar sidebar-left">
-  <h1 class="sidebar-title">Titre de l'application</h1>
-  <ul class="sidebar-tree">
-    <li>
-      <input type="checkbox" id="" />
-      <label for=""><a href="">Mes ressources</a></label>
-      <ul>
-        <li><a href="">Dossier 1</a></li>
-        <li>
-          <input type="checkbox" id="" />
-          <label for=""><a href="">Dossier 2</a></label>
-          <ul>
-            <li><a href="">Sous-dossier 1</a></li>
-            <li><a href="">Sous-dossier 2</a></li>
-            <li><a href="">Sous-dossier 3</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>Ma corbeille</li>
-  </ul>
-  <a class="btn-secondary btn-block">Créer un dossier</a>
-  <a class="btn-secondary btn-block">Importer</a>
-</aside>
-<main class="main-content"></main>
-END DOCUMENTATION */
-
 /* VARIABLES */
-$sidebar-width: 250px;
+$tree-structure-width: 250px;
 
 /* COMPONENT */
 
-/* aside */
-
-.sidebar {
-    width: $sidebar-width;
+/* aside */.tree-structure {
+    width: $tree-structure-width;
     padding: 15px;
     font-size: 1.4rem;
     font-weight: bold;
-    color: $gray-700;
+    color: $gray-600;
     background-color: rgba($white, 0.7);
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
 
@@ -75,7 +45,6 @@ $sidebar-width: 250px;
 
             label {
                 display: block;
-                //@include prepend-icon('\f105')
 
                 a::before {
                     margin-right: 5px;
@@ -126,49 +95,48 @@ $sidebar-width: 250px;
     }
 }
 
-.sidebar-left {
+.tree-structure-left {
     border-radius: $border-radius 0 0 $border-radius;
 }
 
-.sidebar-right {
+.tree-structure-right {
     border-radius: 0 $border-radius $border-radius 0;
 }
 
-.sidebar + .main-content {
-    width: calc(100% - #{$sidebar-width});
+.tree-structure + .main-content {
+    width: calc(100% - #{$tree-structure-width});
     border-radius: 0 $border-radius $border-radius 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar.offcanvas {
-    z-index: 1060; // Z-index augmenté pour que ça passe au dessus.
+.tree-structure.offcanvas {
     background-color: rgba($white, 0.95);
 
-    .sidebar-tree {
+    .tree-structure-tree {
         max-height: calc(100vh - 130px);
     }
 }
 
 @include media-breakpoint-down(lg) {
-    .sidebar {
+    .tree-structure {
         display: none;
         width: 400px;
         background-color: $white;
     }
 
-    .sidebar.sidebar-mobile {
+    .tree-structure.tree-structure-mobile {
         display: block;
     }
 
-    .sidebar + .main-content {
+    .tree-structure + .main-content {
         width: 100%;
         border-radius: $border-radius;
     }
 }
 
-// Sidebar in modal
+// tree-structure in modal
 .modal {
-  .sidebar {
+  .tree-structure {
     padding: 15px 0;
     box-shadow: none;
   }

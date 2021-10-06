@@ -2,6 +2,9 @@
 
     &-header {
         padding: 15px 15px 0;
+        @include media-breakpoint-down(lg) {
+            padding: 10px 10px 0;
+        }
 
         h2 {
             position: relative;
@@ -9,6 +12,9 @@
             font-size: 2rem;
             color: $gray-700;
             color: $gray-700;
+            @include media-breakpoint-down(lg) {
+                font-size: 1.4rem;
+            }
 
             small {
                 font-size: 80%;
@@ -24,24 +30,9 @@
         border-top: 1px solid $gray-200;
         scrollbar-width: thin;
         scrollbar-color: $gray-500 $gray-200;
-        // border-radius: $border-radius;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-
-    .explorer {
-
-        &-header {
-            padding: 10px 10px 0;
-
-            h2 {
-                font-size: 1.4rem;
-            }
-        }
-
-        &-view {
+        @include media-breakpoint-down(lg) {
             height: calc(100vh - 112px);
         }
     }
 }
+
