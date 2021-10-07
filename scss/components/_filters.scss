@@ -10,6 +10,11 @@
 }
 
 .filters-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 0 -5px 1rem;
     margin-bottom: 1em;
 
     &:hover {
@@ -21,6 +26,7 @@
         position: relative;
         display: inline-block;
         padding: 3px 15px;
+        margin: 0 5px 10px;
         overflow: hidden;
         font-weight: 400;
         text-decoration: none;
