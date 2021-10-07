@@ -1,11 +1,9 @@
 .widget-applications {
     //Widget Applications
 
-    .application {
-        &-list {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    .icon-grid {
+        display: flex;
+        flex-wrap: wrap;
 
         &-item {
             position: relative;
@@ -13,7 +11,6 @@
             font-size: 3.2em;
 
             a {
-
                 @include have-child-in-middle();
                 @include background-color-to(white, 0.8s);
 
@@ -24,7 +21,6 @@
                 background: $gray-100;
 
                 > i {
-
                     @include have-child-in-middle();
                     @include square(100%);
 
