@@ -1,6 +1,5 @@
 // Initialize good style and good font on all icons
-[class*="ic-"],
-.ic-app {
+[class^="ic-"] {
     font-family: "generic-icons";
     font-style: normal;
     font-weight: 400;
@@ -17,9 +16,16 @@
     }
 }
 
-// Icons editor
+// Classes utilitaires par application
 .color-app {
+    //applications
     @each $app, $data in $icons-applications {
+        &-#{$app} {
+            color: map-get($data, "color");
+        }
+    }
+    //connectors
+    @each $app, $data in $icons-connectors {
         &-#{$app} {
             color: map-get($data, "color");
         }
@@ -27,7 +33,14 @@
 }
 
 .bg-app {
+    //applications
     @each $app, $data in $icons-applications {
+        &-#{$app} {
+            background-color: map-get($data, "color");
+        }
+    }
+    //connectors
+    @each $app, $data in $icons-connectors {
         &-#{$app} {
             background-color: map-get($data, "color");
         }
@@ -35,8 +48,17 @@
 }
 
 .ic-app {
+    //applications
     @each $app, $data in $icons-applications {
-        &.#{$app}, &.#{$app}-large {
+        &-#{$app}, &-#{$app}-large {
+            &::before {
+                content: map-get($data, "glyph");
+            }
+        }
+    }
+    //connectors
+    @each $app, $data in $icons-connectors {
+        &-#{$app}, &-#{$app}-large {
             &::before {
                 content: map-get($data, "glyph");
             }
