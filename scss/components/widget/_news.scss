@@ -2,7 +2,6 @@
     //Widget Actualités
 
     .news-row {
-
         @include background-color-to($gray-100, 0.4s, $easeOutQuad);
 
         display: flex;
@@ -11,8 +10,8 @@
         text-decoration: none;
 
         &-image {
-            width: 55px;
-            padding-right: 15px;
+            width: 65px;
+            padding-right: 25px;
             text-align: center;
             transition: transform 0.4s $easeInOutQuad;
             transform-origin: center;
