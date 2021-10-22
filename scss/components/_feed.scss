@@ -65,10 +65,6 @@ $feed-spacing: 20px !default;
                 font-size: 0.8em;
                 color: $gray-600;
                 border-bottom: 1px solid $gray-200;
-
-                @include media-breakpoint-down(lg) {
-                    padding-right: 50px;
-                }
             }
 
             .report {
