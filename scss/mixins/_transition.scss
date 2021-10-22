@@ -74,8 +74,10 @@ $default-duration: 0.4s;
     transition-duration: $default-duration;
     transition-property: $properties;
 
-    &:hover {
-        @content;
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
     }
 }
 

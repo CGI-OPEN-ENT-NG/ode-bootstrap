@@ -29,10 +29,10 @@ $feed-spacing: 20px !default;
 
     &-item {
         display: flex;
-        padding: 15px 20px;
+        padding: 15px $feed-spacing;
         margin-bottom: $feed-spacing;
         overflow: hidden;
-        background: #fff;
+        background: var(--bs-white);
         border-radius: 8px;
 
         @include add-before-layer();
@@ -101,8 +101,8 @@ $feed-spacing: 20px !default;
             justify-content: center;
             width: 60%;
             height: 100%;
-            padding-left: 20px;
-            background-color: #fff;
+            padding-left: 2rem;
+            background-color: var(--bs-white);
             transition-duration: 0.2s;
             transform: translateX(120%);
             justify-self: stretch;
@@ -131,7 +131,7 @@ $feed-spacing: 20px !default;
                     padding: 0 10px;
                     transform: translateY(0);
                     transform-origin: center;
-
+                    
                     @include add-transitions(transform);
                 }
 
@@ -141,14 +141,14 @@ $feed-spacing: 20px !default;
                 height: 100%;
                 color: $primary;
                 cursor: pointer;
-                background: #fff;
+                background: var(--bs-white);
                 border-right: 1px solid $gray-200;
                 border-left: 1px solid $gray-200;
                 box-shadow: -5px 0 10px -10px rgba(0, 0, 0, 0.25);
                 transform: translateX(-100%);
 
                 @include add-transitions(background-color, color) {
-                    color: #fff;
+                    color: var(--bs-white);
                     background-color: $primary;
                 }
 
@@ -167,6 +167,11 @@ $feed-spacing: 20px !default;
                 .control {
                     &::before {
                         transform: rotate(180deg);
+                    }
+
+                    @media (hover: none) {
+                        color: var(--bs-white);
+                        background-color: $primary;
                     }
                 }
             }
