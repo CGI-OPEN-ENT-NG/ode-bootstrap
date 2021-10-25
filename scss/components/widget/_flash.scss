@@ -21,16 +21,16 @@ $widget-flash-colors: (
         }
     }
 
-    .widget-body {
+    /* .widget-body {
         padding-bottom: 1rem;
-    }
+    } */
 
     .btn {
         &-close {
             position: absolute;
             top: 10px;
             right: 10px;
-            color: --bs-dark;
+            color: var(--bs-dark);
             text-shadow: none;
         }
     
@@ -58,25 +58,51 @@ $widget-flash-colors: (
     .flash-content {
         padding-right: 1rem;
 
-        &:not(.flash-content-is-expandable) {
+        &.can-be-truncated {
+            &:not(.flash-content-is-expandable) {
             
-            p {
-                @include has-text-truncated();
+                p {
+                    @include has-text-truncated(4);
+    
+                    &:first-child {
+                        &::after {
+                            content: '...';
+                            display: inline-block;
+                            width: 1em;
+                            height: 1em;
+                            margin-left: 0.2em;
+                        }
+                    }
+                    
+                    + p {
+                        display: none;
+                    }
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 2em;
+                    right: 0;
+                    left: 0;
+                    height: 4em;
+                    background: linear-gradient(to bottom, rgba(255,255,255,0), var(--custom-message-color));
+                }
+    
+                @media not all and (min-resolution:.001dpcm) {
+                    &::after {
+                        display: none;
+                    }
+                }
+    
+                .flash-content-signature {
+                    display: none;
+                }
             }
 
             .flash-content-signature {
-                display: none;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                z-index: 1;
-                bottom: 2em;
-                right: 0;
-                left: 0;
-                height: 4em;
-                background: linear-gradient(to bottom, rgba(255,255,255,0), var(--custom-message-color));
+                padding-bottom: 1rem;
             }
         }
 
