@@ -58,25 +58,17 @@ $widget-flash-colors: (
     .flash-content {
         padding-right: 1rem;
 
+        p {
+            > br:first-child {
+                display: none;
+            }
+        }
+
         &.can-be-truncated {
             &:not(.flash-content-is-expandable) {
             
                 p {
                     @include has-text-truncated(4);
-    
-                    &:first-child {
-                        &::after {
-                            content: '...';
-                            display: inline-block;
-                            width: 1em;
-                            height: 1em;
-                            margin-left: 0.2em;
-                        }
-                    }
-                    
-                    + p {
-                        display: none;
-                    }
                 }
     
                 &::after {
