@@ -14,7 +14,6 @@ $avatar-size: 65px !default;
         width: 25px;
         height: 25px;
     }
-
     &--50 {
         width: 50px;
         height: 50px;
@@ -44,7 +43,7 @@ $avatar-size: 65px !default;
             right: 0;
             bottom: 0;
             font-size: $avatar-size / 3.5;
-            color: #fff;
+            color: $white;
             transform: translate(20%, 20%);
         }
     }
@@ -55,6 +54,19 @@ $avatar-size: 65px !default;
 
         img {
             @include avatar-image($avatar-size);
+        }
+    }
+
+    .navbar.no-1d & {
+        margin-top: -0.3rem;
+        width: 3rem;
+        max-width: 3rem;
+        background-color: $white;
+
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+            width: 2rem;
+            max-width: 2rem;
         }
     }
 }
