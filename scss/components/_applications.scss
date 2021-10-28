@@ -9,7 +9,7 @@ $application-icon-size: 80px; //110px sur le 1D
 $application-icon-size-sm: 60px; 
 
 /* COMPONENT */
-.applications-board {
+.applications {
     &-title {
         color: $secondary;
     }
@@ -37,7 +37,7 @@ $application-icon-size-sm: 60px;
             width: $application-icon-size;
             height: $application-icon-size;
             font-size: 5rem;
-            color: $text-color;
+            // color: $text-color;
         }
 
         span {
@@ -71,7 +71,7 @@ $application-icon-size-sm: 60px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 
             i {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 line-height: 30px;
                 color: $white;
             }
@@ -167,7 +167,7 @@ $application-icon-size-sm: 60px;
 }
 
 @include media-breakpoint-down(sm) {
-    .applications-board {
+    .applications {
         &-item {
             width: $application-width-sm;
             height: $application-height-sm;
