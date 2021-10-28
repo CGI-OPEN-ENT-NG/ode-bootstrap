@@ -1,8 +1,32 @@
-.toast-container {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    padding: 10px;
-    font-size: 2em;
+$toast-start-color: #f0f9fc;
+$toast-end-color: #dceff7;
+
+.toast {
+    &-container {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        padding: 10px;
+        font-size: 2em;
+    }
+    
+    ode-infotip & {
+        background: linear-gradient(to right, $toast-start-color, $toast-end-color);
+
+        &,
+        > *,
+        > * > * {
+            border: 0;
+        }
+
+        .toast-header {
+            padding-bottom: 0;
+            margin-bottom: -1rem;
+            background-color: transparent;
+        }
+        .toast-body {
+            color: var(--bs-secondary);
+        }
+    }
 }
