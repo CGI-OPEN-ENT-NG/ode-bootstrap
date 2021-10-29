@@ -61,6 +61,7 @@ $avatar-size: 65px !default;
         margin-top: -0.3rem;
         width: 3rem;
         max-width: 3rem;
+        height: auto;
         background-color: $white;
 
         @include media-breakpoint-down(md) {

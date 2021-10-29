@@ -1,9 +1,10 @@
 .sticky-toolbox {
     position: fixed;
     top: 100px;
+    bottom: 0;
     right: 0;
     z-index: 10;
-    color: #fff;
+    color: $white;
     transform: translateX(100%);
 
     @include add-transitions(transform);
@@ -17,7 +18,7 @@
         width: 50px;
         padding: 5px 10px;
         font-size: 1.5em;
-        color: #fff;
+        color: $white;
         cursor: pointer;
         background: $primary;
         border-top-left-radius: 50%;
@@ -26,6 +27,7 @@
     }
 
     .content {
+        overflow: auto;
         width: 400px;
         height: 100%;
         padding: 20px 30px;
@@ -43,7 +45,7 @@
 
     .bt {
         display: block;
-        color: #fff;
+        color: $white;
         text-align: center;
         text-decoration: none;
         background: $cyan;
@@ -95,12 +97,13 @@
 
     .bt-lang {
         margin-bottom: 15px;
-        color: #fff;
+        color: $white;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
 
         .flag {
+            max-width: 100%;
             height: auto;
             margin: 0 auto;
             filter: saturate(0);
