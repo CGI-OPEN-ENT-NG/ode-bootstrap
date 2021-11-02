@@ -15428,6 +15428,7 @@ ode-infotip .toast {
 
 .sticky-toolbox {
   position: fixed;
+  display: none;
   top: 100px;
   bottom: 0;
   right: 0;
@@ -15438,6 +15439,7 @@ ode-infotip .toast {
   transition-duration: 0.4s;
   transition-property: transform; }
   .sticky-toolbox.open {
+    display: block;
     transform: translateX(0); }
   .sticky-toolbox .link-tool {
     position: absolute;
