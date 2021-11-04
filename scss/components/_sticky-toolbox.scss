@@ -1,24 +1,19 @@
 .sticky-toolbox {
     position: fixed;
-    display: none;
     top: 100px;
     bottom: 0;
     right: 0;
-    z-index: 10;
+    z-index: 22;
     color: $white;
     transform: translateX(100%);
 
     @include add-transitions(transform);
 
-    &.open {
-        display: block;
-        transform: translateX(0);
-    }
-
     .link-tool {
         position: absolute;
         width: 50px;
-        padding: 5px 10px;
+        // padding: 5px 10px;
+        padding: 0.5rem 1.3rem;
         font-size: 1.5em;
         color: $white;
         cursor: pointer;
@@ -28,15 +23,16 @@
         transform: translate(-100%, 0);
     }
 
-    .content {
+    .sticky-toolbox-content {
+        display: none;
         overflow: auto;
         width: 400px;
         height: 100%;
         padding: 20px 30px;
-        background: $third;
+        background: $secondary;
     }
 
-    .title {
+    .sticky-toolbox-title {
         margin: 0 0 10px;
         font-weight: 700;
 
@@ -45,15 +41,16 @@
         }
     }
 
-    .bt {
+    .sticky-toolbox-item {
         display: block;
         color: $white;
         text-align: center;
         text-decoration: none;
-        background: $cyan;
-        border-radius: 0;
+        background: rgba($white, .10);
+        border-radius: 18px;
+        overflow: hidden;
 
-        @include background-color-to(rgba($cyan, 0.6));
+        @include background-color-to($primary);
 
         &.selected {
             background: $primary;
@@ -73,13 +70,13 @@
     }
 
     .buttons-theme {
-        .bt {
+        .sticky-toolbox-item {
             padding: 20px 10px;
         }
     }
 
     .buttons-widget {
-        .bt {
+        .sticky-toolbox-item {
             .inner {
                 position: relative;
                 display: block;
@@ -90,6 +87,7 @@
                 position: absolute;
                 top: 0;
                 font-size: 2em;
+                border-radius: 18px;
 
                 @include have-child-in-middle();
                 @include square(100%);
@@ -97,7 +95,13 @@
         }
     }
 
-    .bt-lang {
+    .buttons-countries {
+        > div {
+            flex: 0 0 25%;
+        }
+    }
+
+    .sticky-toolbox-country {
         margin-bottom: 15px;
         color: $white;
         text-align: center;
@@ -123,6 +127,14 @@
             .flag {
                 filter: saturate(0.3);
             }
+        }
+    }
+
+    &.open {
+        transform: translateX(0);
+
+        .sticky-toolbox-content {
+            display: block;
         }
     }
 }

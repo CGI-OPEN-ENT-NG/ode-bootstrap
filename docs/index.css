@@ -13456,6 +13456,9 @@ html {
 .color-app-exercizer {
   color: #6f42c1; }
 
+.color-app-qwant {
+  color: #d63384; }
+
 .color-app-forum {
   color: #0dcaf0; }
 
@@ -13821,6 +13824,9 @@ html {
 
 .bg-app-exercizer {
   background-color: #6f42c1; }
+
+.bg-app-qwant {
+  background-color: #d63384; }
 
 .bg-app-forum {
   background-color: #0dcaf0; }
@@ -14188,6 +14194,9 @@ html {
 .ic-app-exercizer::before, .ic-app-exercizer-large::before {
   content: ""; }
 
+.ic-app-qwant::before, .ic-app-qwant-large::before {
+  content: ""; }
+
 .ic-app-forum::before, .ic-app-forum-large::before {
   content: ""; }
 
@@ -14525,6 +14534,78 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer; }
+
+.navbar {
+  padding: 0 2rem;
+  width: 100%;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4); }
+
+.navbar .container {
+  padding: 0; }
+
+.navbar .btn {
+  color: #fff;
+  padding: .6rem .8rem;
+  font-size: 3rem;
+  border-radius: 0;
+  align-items: center;
+  border-bottom: 3px solid transparent; }
+  .navbar .btn > a {
+    color: inherit; }
+  .navbar .btn i.ic-help {
+    font-size: 3.2rem; }
+  .navbar .btn:first-child {
+    margin-right: auto; }
+  .navbar .btn:hover {
+    border-bottom: 3px solid #0d6efd; }
+
+.navbar .navigation {
+  display: inline-flex;
+  align-items: center; }
+  .navbar .navigation .btn .new-mails {
+    position: relative;
+    top: -1.5rem;
+    right: 1rem;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: -2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    background: #0d6efd;
+    border-radius: 50%; }
+  .navbar .navigation .btn #my-photo {
+    width: 25px;
+    margin: .7rem 0;
+    background-color: #fff;
+    border-radius: 50%; }
+
+.navbar-brand {
+  padding: 0;
+  margin-right: 0; }
+  .navbar-brand .logo {
+    display: inline-block;
+    height: 44px; }
+
+@media (max-width: 767.98px) {
+  .navbar .container {
+    padding: 0; }
+  .navbar .btn {
+    padding: .5rem;
+    font-size: 2rem; }
+    .navbar .btn i.ic-help {
+      font-size: 2.2rem; }
+  .navbar .application-title {
+    display: block;
+    width: calc(100% - 300px);
+    color: #fff; }
+  .navbar .logo {
+    height: 30px; }
+  .navbar .dropdown [class*="ic-"] {
+    font-size: 2rem;
+    vertical-align: middle; } }
 
 .container-advanced {
   position: relative;
@@ -15428,23 +15509,19 @@ ode-infotip .toast {
 
 .sticky-toolbox {
   position: fixed;
-  display: none;
   top: 100px;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 22;
   color: #fff;
   transform: translateX(100%);
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-duration: 0.4s;
   transition-property: transform; }
-  .sticky-toolbox.open {
-    display: block;
-    transform: translateX(0); }
   .sticky-toolbox .link-tool {
     position: absolute;
     width: 50px;
-    padding: 5px 10px;
+    padding: 0.5rem 1.3rem;
     font-size: 1.5em;
     color: #fff;
     cursor: pointer;
@@ -15452,28 +15529,30 @@ ode-infotip .toast {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     transform: translate(-100%, 0); }
-  .sticky-toolbox .content {
+  .sticky-toolbox .sticky-toolbox-content {
+    display: none;
     overflow: auto;
     width: 400px;
     height: 100%;
     padding: 20px 30px;
-    background: #0984b3; }
-  .sticky-toolbox .title {
+    background: #6c757d; }
+  .sticky-toolbox .sticky-toolbox-title {
     margin: 0 0 10px;
     font-weight: 700; }
-    .sticky-toolbox .title:not(:first-child) {
+    .sticky-toolbox .sticky-toolbox-title:not(:first-child) {
       margin-top: 10px; }
-  .sticky-toolbox .bt {
+  .sticky-toolbox .sticky-toolbox-item {
     display: block;
     color: #fff;
     text-align: center;
     text-decoration: none;
-    background: #0dcaf0;
-    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    .sticky-toolbox .bt:hover {
-      background-color: rgba(13, 202, 240, 0.6); }
-    .sticky-toolbox .bt.selected {
+    .sticky-toolbox .sticky-toolbox-item:hover {
+      background-color: #0d6efd; }
+    .sticky-toolbox .sticky-toolbox-item.selected {
       background: #0d6efd; }
   .sticky-toolbox [class*="buttons-"] {
     margin-right: -5px;
@@ -15483,28 +15562,31 @@ ode-infotip .toast {
       padding-right: 5px;
       padding-left: 5px;
       margin-bottom: 10px; }
-  .sticky-toolbox .buttons-theme .bt {
+  .sticky-toolbox .buttons-theme .sticky-toolbox-item {
     padding: 20px 10px; }
-  .sticky-toolbox .buttons-widget .bt .inner {
+  .sticky-toolbox .buttons-widget .sticky-toolbox-item .inner {
     position: relative;
     display: block;
     padding-top: 100%; }
-  .sticky-toolbox .buttons-widget .bt i {
+  .sticky-toolbox .buttons-widget .sticky-toolbox-item i {
     position: absolute;
     top: 0;
     font-size: 2em;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%; }
-  .sticky-toolbox .bt-lang {
+  .sticky-toolbox .buttons-countries > div {
+    flex: 0 0 25%; }
+  .sticky-toolbox .sticky-toolbox-country {
     margin-bottom: 15px;
     color: #fff;
     text-align: center;
     text-decoration: none;
     cursor: pointer; }
-    .sticky-toolbox .bt-lang .flag {
+    .sticky-toolbox .sticky-toolbox-country .flag {
       max-width: 100%;
       height: auto;
       margin: 0 auto;
@@ -15512,10 +15594,14 @@ ode-infotip .toast {
       transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition-duration: 0.4s;
       transition-property: filter; }
-    .sticky-toolbox .bt-lang.selected .flag {
+    .sticky-toolbox .sticky-toolbox-country.selected .flag {
       filter: saturate(1); }
-    .sticky-toolbox .bt-lang:hover:not(.selected) .flag {
+    .sticky-toolbox .sticky-toolbox-country:hover:not(.selected) .flag {
       filter: saturate(0.3); }
+  .sticky-toolbox.open {
+    transform: translateX(0); }
+    .sticky-toolbox.open .sticky-toolbox-content {
+      display: block; }
 
 .table > :not(:last-child) > :last-child > * {
   border-bottom-color: #e9ecef; }
@@ -16196,7 +16282,7 @@ ode-infotip .toast {
         display: none; } }
 
 .widget-school .button-list {
-  padding: -3rem;
+  padding: 1.6rem;
   padding-bottom: 0; }
   .widget-school .button-list > * {
     margin-bottom: 1em; }
