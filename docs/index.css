@@ -14563,8 +14563,6 @@ html {
     color: inherit; }
   .navbar .btn i.ic-help {
     font-size: 3.2rem; }
-  .navbar .btn:first-child {
-    margin-right: auto; }
   .navbar .btn:hover {
     border-bottom: 3px solid #0d6efd; }
 
