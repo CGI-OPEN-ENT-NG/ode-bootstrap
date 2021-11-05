@@ -2316,30 +2316,34 @@ textarea.form-control-lg {
     pointer-events: none;
     opacity: 0.65; }
 
-.btn-primary {
+.btn-primary, popover popover-content .search-text .searchButton {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd; }
-  .btn-primary:hover {
+  .btn-primary:hover, popover popover-content .search-text .searchButton:hover {
     color: #fff;
     background-color: #0b5ed7;
     border-color: #0a58ca; }
-  .btn-check:focus + .btn-primary, .btn-primary:focus {
+  .btn-check:focus + .btn-primary, popover popover-content .search-text .btn-check:focus + .searchButton, .btn-primary:focus, popover popover-content .search-text .searchButton:focus {
     color: #fff;
     background-color: #0b5ed7;
     border-color: #0a58ca;
     box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5); }
-  .btn-check:checked + .btn-primary,
-  .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-check:checked + .btn-primary, popover popover-content .search-text .btn-check:checked + .searchButton,
+  .btn-check:active + .btn-primary,
+  popover popover-content .search-text .btn-check:active + .searchButton, .btn-primary:active, popover popover-content .search-text .searchButton:active, .btn-primary.active, popover popover-content .search-text .active.searchButton,
+  .show > .btn-primary.dropdown-toggle,
+  popover popover-content .search-text .show > .dropdown-toggle.searchButton {
     color: #fff;
     background-color: #0a58ca;
     border-color: #0a53be; }
-    .btn-check:checked + .btn-primary:focus,
-    .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-check:checked + .btn-primary:focus, popover popover-content .search-text .btn-check:checked + .searchButton:focus,
+    .btn-check:active + .btn-primary:focus,
+    popover popover-content .search-text .btn-check:active + .searchButton:focus, .btn-primary:active:focus, popover popover-content .search-text .searchButton:active:focus, .btn-primary.active:focus, popover popover-content .search-text .active.searchButton:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    popover popover-content .search-text .show > .dropdown-toggle.searchButton:focus {
       box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5); }
-  .btn-primary:disabled, .btn-primary.disabled {
+  .btn-primary:disabled, popover popover-content .search-text .searchButton:disabled, .btn-primary.disabled, popover popover-content .search-text .disabled.searchButton {
     color: #fff;
     background-color: #0d6efd;
     border-color: #0d6efd; }
@@ -15552,13 +15556,15 @@ ode-infotip .toast {
     text-align: center;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
+    border-radius: 10px;
     overflow: hidden;
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     .sticky-toolbox .sticky-toolbox-item:hover {
       background-color: #0d6efd; }
     .sticky-toolbox .sticky-toolbox-item.selected {
       background: #0d6efd; }
+      .sticky-toolbox .sticky-toolbox-item.selected:hover {
+        background: rgba(255, 255, 255, 0.1); }
   .sticky-toolbox [class*="buttons-"] {
     margin-right: -5px;
     margin-left: -5px; }
@@ -16431,5 +16437,87 @@ ode-infotip .toast {
       padding-bottom: 1rem; }
     .widget-flash .flash-content > *:last-child {
       margin-bottom: 0; }
+
+popover {
+  position: relative;
+  z-index: 100;
+  display: inline-block; }
+  popover popover-content.hidden {
+    pointer-events: none;
+    opacity: 0; }
+  popover popover-content {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+    box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, 4%);
+    /* .more {
+            padding: 1rem;
+            text-align: center;
+            background-color: $gray-500;
+            transition: background-color 250ms ease;
+
+            &:hover {
+                background-color: $primary;
+            }
+        } */ }
+    popover popover-content::before {
+      content: "\25b2";
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      z-index: 0;
+      display: block;
+      width: 40px;
+      font-family: none;
+      font-size: 2rem;
+      color: #fff;
+      transform: translateX(-50%); }
+    popover popover-content .widget-applications .widget-body {
+      padding: 1.5rem;
+      max-height: 22rem;
+      overflow: auto; }
+    .widget-footer-action popover popover-content .widget-applications {
+      color: #6c757d; }
+    popover popover-content .bookmarked-app {
+      padding: .5rem;
+      flex: 1 1 33%;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-duration: 0.4s;
+      transition-property: border-color;
+      /* &:hover {
+                border-color: $gray-200;
+            } */ }
+      @media (hover: hover) {
+        popover popover-content .bookmarked-app:hover {
+          border-color: #e9ecef; } }
+      popover popover-content .bookmarked-app .application {
+        font-size: 3rem; }
+    popover popover-content .search-text .searchInput {
+      height: 30px;
+      margin: 1rem -0.2rem 1rem 0;
+      width: 80%;
+      border: 1px solid #e9ecef; }
+    popover popover-content .search-text .searchButton {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      margin-top: 1rem;
+      line-height: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      border: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: none; }
 
 /*# sourceMappingURL=index.css.map */
