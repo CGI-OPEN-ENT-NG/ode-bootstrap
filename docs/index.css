@@ -555,9 +555,9 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5); }
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x)); }
   .row > * {
     flex-shrink: 0;
     width: 100%;
@@ -1497,8 +1497,8 @@ progress {
     vertical-align: inherit; }
   .table > thead {
     vertical-align: bottom; }
-  .table > :not(:last-child) > :last-child > * {
-    border-bottom-color: currentColor; }
+  .table > :not(:first-child) {
+    border-top: 2px solid currentColor; }
 
 .caption-top {
   caption-side: top; }
@@ -1514,7 +1514,10 @@ progress {
 .table-borderless > :not(caption) > * > * {
   border-bottom-width: 0; }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-borderless > :not(:first-child) {
+  border-top-width: 0; }
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color); }
 
@@ -1522,7 +1525,7 @@ progress {
   --bs-table-accent-bg: var(--bs-table-active-bg);
   color: var(--bs-table-active-color); }
 
-.table-hover > tbody > tr:hover {
+.table-hover > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color); }
 
@@ -1859,13 +1862,15 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 1.225rem; }
+  font-size: 1.225rem;
+  border-radius: 6px; }
 
 .form-select-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-  font-size: calc(1.3rem + 0.6vw); }
+  font-size: calc(1.3rem + 0.6vw);
+  border-radius: 10px; }
   @media (min-width: 1200px) {
     .form-select-lg {
       font-size: 1.75rem; } }
@@ -15286,7 +15291,7 @@ ode-infotip .toast {
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 20;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: start;
