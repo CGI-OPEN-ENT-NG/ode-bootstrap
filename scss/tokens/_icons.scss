@@ -65,3 +65,14 @@
         }
     }
 }
+
+// Classes des icones pour les widgets
+.ic-widget {
+    @each $app, $data in $icons-widgets {
+        &-#{$app}, &-#{$app}-large {
+            &::before {
+                content: map-get($data, "glyph");
+            }
+        }
+    }
+}

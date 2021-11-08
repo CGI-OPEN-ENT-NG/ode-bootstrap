@@ -34,6 +34,24 @@ $icons-interface: (
     "carnet-de-bord": ( "glyph": "\e902"),
 ) !default;
 
+$icons-widgets: (
+    "actualites":       ("glyph": "\e85b"),
+    "aide-devoirs":     ("glyph": "\e818"),
+    "agenda":           ("glyph": "\e83c"),
+    "apps":             ("glyph": "\e86c"),
+    "bookmark-empty":   ("glyph": "\e888"),
+    "calendar":         ("glyph": "\e834"),
+    "carnet-de-bord":   ("glyph": "\e902"),
+    "microphone":       ("glyph": "\e864"),
+    "maxicours":        ("glyph": "\e825"),
+    "mood":             ("glyph": "\e811"),
+    "notes":            ("glyph": "\e806"),
+    "rss":              ("glyph": "\e861"),
+    "qwant":            ("glyph": "\e93d"),
+    "schoolbook":       ("glyph": "\e91e"),
+    "signets":          ("glyph": "\e80c"),
+) !default;
+
 $icons-applications: (
     "account":             ( "color": $purple, "glyph": "\e905"),
     "actualites":          ( "color": $cyan,   "glyph": "\e85b"),
