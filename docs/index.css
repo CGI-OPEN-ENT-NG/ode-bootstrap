@@ -15041,6 +15041,17 @@ html {
       color: #fd7e14;
       border-color: #fd7e14; } }
 
+.btn-light {
+  background-color: #e9ecef;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-duration: 0.4s;
+  transition-property: color, background-color; }
+  @media (hover: hover) {
+    .btn-light:hover {
+      color: #0d6efd;
+      text-decoration: none;
+      background-color: #e9ecef; } }
+
 .btn-circle {
   width: 2.5em;
   height: 2.5em;
@@ -15080,7 +15091,7 @@ html {
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 999;
   padding: 10px;
   font-size: 2em; }
 
@@ -15089,13 +15100,18 @@ ode-infotip .toast {
   ode-infotip .toast,
   ode-infotip .toast > *,
   ode-infotip .toast > * > * {
-    border: 0; }
+    border: 0;
+    border-radius: 0; }
   ode-infotip .toast .toast-header {
     padding-bottom: 0;
     margin-bottom: -1rem;
     background-color: transparent; }
   ode-infotip .toast .toast-body {
-    color: var(--bs-secondary); }
+    color: #0984b3; }
+  ode-infotip .toast .btn, ode-infotip .toast .navbar .navigation .zimbra-btn > a, .navbar .navigation ode-infotip .toast .zimbra-btn > a {
+    border-radius: 0; }
+    ode-infotip .toast .btn-light:hover {
+      color: #0d6efd; }
 
 /* VARIABLES */
 /* COMPONENT */
