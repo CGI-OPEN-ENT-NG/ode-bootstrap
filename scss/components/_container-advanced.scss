@@ -55,17 +55,35 @@ $breakpoint-down: "lg";
             .container-advanced-wrapper {
                 transform: translateX(0);
             }
+            &.hide {
+                .container-advanced-center > *,
+                .container-advanced-right > * {
+                    display: none;
+                }
+            }
         }
 
         &.focus-right {
             .container-advanced-wrapper {
                 transform: translateX(100 / 3 * 2% * -1);
             }
+            &.hide {
+                .container-advanced-center > *,
+                .container-advanced-left > * {
+                    display: none;
+                }
+            }
         }
 
         &.focus-center {
             .container-advanced-wrapper {
                 transform: translateX(100 / 3 * 1% * -1);
+            }
+            &.hide {
+                .container-advanced-left > *,
+                .container-advanced-right > * {
+                    display: none;
+                }
             }
         }
     }
