@@ -50,14 +50,14 @@
         border-radius: 10px;
         overflow: hidden;
 
-        @include background-color-to($primary);
+        // @include background-color-to($primary);
 
         &.selected {
             background: $primary;
 
-            &:hover {
+            /* &:hover {
                 background: rgba($white, .10);
-            }
+            } */
         }
     }
 
