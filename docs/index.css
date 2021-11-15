@@ -16190,7 +16190,8 @@ popover {
   .widget-school-header .school-multiple {
     position: relative;
     padding-left: 1.5em;
-    cursor: pointer; }
+    cursor: pointer;
+    white-space: normal; }
     .widget-school-header .school-multiple::before {
       display: inline-block;
       font-family: "Font Awesome 5 Free";
@@ -16217,12 +16218,16 @@ popover {
       left: 0;
       z-index: 10;
       transform: translateY(-50%); }
+    .widget-school-header .school-multiple::after {
+      display: none; }
   .widget-school-header .school-choice > div {
     transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 6px 20px;
     cursor: pointer; }
     .widget-school-header .school-choice > div:hover {
       color: #0d6efd; }
+    .widget-school-header .school-choice > div.dropdown-item {
+      white-space: normal; }
   .widget-school-header .avatar-list {
     position: absolute;
     bottom: 0;

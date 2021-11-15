@@ -27,6 +27,11 @@
 
                 padding-left: 1.5em;
                 cursor: pointer;
+                white-space: normal;
+
+                &::after {
+                    display: none
+                }
             }
 
             &-choice {
@@ -35,6 +40,10 @@
 
                     padding: 6px 20px;
                     cursor: pointer;
+
+                    &.dropdown-item {
+                        white-space: normal;
+                    }
                 }
             }
         }
