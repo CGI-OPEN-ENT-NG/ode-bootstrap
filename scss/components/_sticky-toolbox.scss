@@ -59,6 +59,12 @@
                 background: rgba($white, .10);
             } */
         }
+
+        small {
+            display: inline-block;
+            line-height: 1.6rem;
+            margin-top: 0.5rem;
+        }
     }
 
     [class*="buttons-"] {

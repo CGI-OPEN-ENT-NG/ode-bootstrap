@@ -6,19 +6,19 @@
 
         display: flex;
         align-items: center;
-        padding: 10px $widget-padding-x;
+        padding: 1rem $widget-padding-x;
         text-decoration: none;
 
         &-image {
-            width: 65px;
-            padding-right: 25px;
+            width: 60px;
+            padding-right: 2.5rem;
             text-align: center;
             transition: transform 0.4s $easeInOutQuad;
             transform-origin: center;
 
             img {
-                max-width: 100%;
-                max-height: 4em;
+                max-height: 4rem;
+                max-width: 4rem;
             }
         }
 
