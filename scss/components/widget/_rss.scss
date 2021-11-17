@@ -7,7 +7,8 @@
             color: #fff;
             background: $third;
 
-            @include append-icon("\f0d7", 1em, 15px) cursor: pointer;
+            @include append-icon("\f0d7", 1em, 15px);
+            cursor: pointer;
         }
 
         .item {
@@ -21,6 +22,10 @@
                 text-decoration: none;
 
                 @include background-color-to($gray-100, 0.4s, $easeOutQuad);
+            }
+
+            img {
+                @extend .img-fluid;
             }
         }
     }
