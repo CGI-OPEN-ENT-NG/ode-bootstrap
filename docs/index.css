@@ -14838,7 +14838,11 @@ html {
   border-radius: 50%; }
 
 .modal .modal-title {
-  color: #0dcaf0; }
+  color: #0dcaf0;
+  font-size: 2rem; }
+
+.modal-help .modal-footer {
+  display: none; }
 
 .toast-container {
   position: fixed;
