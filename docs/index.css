@@ -494,7 +494,7 @@ progress {
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 
-.img-fluid, .widget-rss .rss-feed .item img {
+.img-fluid {
   max-width: 100%;
   height: auto; }
 
@@ -16119,7 +16119,7 @@ popover {
     flex: 1;
     padding: 10px;
     text-align: center; }
-    .widget-record .widget-body > * .img-fluid, .widget-record .widget-body > * .widget-rss .rss-feed .item img, .widget-rss .rss-feed .item .widget-record .widget-body > * img {
+    .widget-record .widget-body > * .img-fluid {
       width: 100px; }
 
 .record-timer {
@@ -16178,6 +16178,10 @@ popover {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   .widget-rss .rss-feed .item a:hover {
     background-color: #f8f9fa; }
+
+.widget-rss .rss-feed .item img {
+  max-width: 100%;
+  height: auto; }
 
 .widget-school-header {
   border-top-left-radius: 6px;
@@ -16249,12 +16253,13 @@ popover {
       .widget-school-header .avatar-list .avatar-link:nth-child(n + 4) {
         display: none; } }
 
-.widget-school .button-list {
+.widget-school .btn-group {
   padding: 1.6rem;
   padding-bottom: 0; }
-  .widget-school .button-list > * {
+  .widget-school .btn-group > * {
+    padding: 0.6rem 1.5rem;
     margin-bottom: 1em; }
-    .widget-school .button-list > *:not(:last-child) {
+    .widget-school .btn-group > *:not(:last-child) {
       margin-right: 0.4em; }
 
 .widget-dashboard .dashboard-choice {

@@ -67,11 +67,12 @@
         }
     }
 
-    .button-list {
+    .btn-group {
         padding: 1.6rem;
         padding-bottom: 0;
 
         > * {
+            padding: 0.6rem 1.5rem;
             margin-bottom: 1em;
 
             &:not(:last-child) {
