@@ -57,8 +57,9 @@
         .icon {
             position: relative;
             z-index: 2;
-            display: inline-block;
             color: inherit;
+            display: inline-flex;
+            align-items: center;
             vertical-align: middle;
 
             @include square(1.5em);
@@ -68,7 +69,6 @@
             position: relative;
             z-index: 2;
             display: inline-block;
-            // padding-top: 2px;
             font-size: 1em;
             vertical-align: middle;
         }

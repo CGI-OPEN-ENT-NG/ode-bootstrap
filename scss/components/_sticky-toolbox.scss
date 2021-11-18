@@ -106,8 +106,13 @@
     }
 
     .buttons-countries {
+        padding: 0 0.8rem;
+        gap: 2rem;
+
         > div {
-            flex: 0 0 25%;
+            padding: 0 !important;
+            margin-bottom: 0 !important;
+            width: 64px;
         }
     }
 
