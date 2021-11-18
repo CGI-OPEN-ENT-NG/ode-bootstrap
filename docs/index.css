@@ -15793,6 +15793,8 @@ popover {
     font-style: italic;
     color: #495057;
     text-align: center; }
+    .widget-empty-message.link, .feed-item .zone-text .report a.widget-empty-message {
+      cursor: pointer; }
   .widget-header {
     position: relative;
     display: flex;
