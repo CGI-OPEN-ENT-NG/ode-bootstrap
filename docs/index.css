@@ -13551,7 +13551,7 @@ html {
   color: #20c997; }
 
 .color-app-timeline {
-  color: #ffc107; }
+  color: #6610f2; }
 
 .color-app-timelinegenerator {
   color: #ffc107; }
@@ -13920,7 +13920,7 @@ html {
   background-color: #20c997; }
 
 .bg-app-timeline {
-  background-color: #ffc107; }
+  background-color: #6610f2; }
 
 .bg-app-timelinegenerator {
   background-color: #ffc107; }
@@ -14289,7 +14289,7 @@ html {
   content: ""; }
 
 .ic-app-timeline::before, .ic-app-timeline-large::before {
-  content: ""; }
+  content: ""; }
 
 .ic-app-timelinegenerator::before, .ic-app-timelinegenerator-large::before {
   content: ""; }
@@ -15342,7 +15342,6 @@ ode-infotip .toast {
       position: relative;
       z-index: 2;
       display: inline-block;
-      padding-top: 2px;
       font-size: 1em;
       vertical-align: middle; }
 
