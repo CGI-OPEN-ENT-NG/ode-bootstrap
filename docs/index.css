@@ -15356,8 +15356,9 @@ ode-infotip .toast {
   position: relative; }
   .input-searchbar .ic-search {
     position: absolute;
-    top: 5px;
-    left: 20px;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
     color: #adb5bd; }
   .input-searchbar .ic-search + input {
     padding-left: 40px; }
