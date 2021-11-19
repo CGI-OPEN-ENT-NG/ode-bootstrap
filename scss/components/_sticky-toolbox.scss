@@ -108,28 +108,35 @@
     .buttons-countries {
         padding: 0 0.8rem;
         gap: 2rem;
+        margin: 0 -1rem;
+        justify-content: center;
 
         > div {
             padding: 0 !important;
             margin-bottom: 0 !important;
-            width: 64px;
+            width: 20%;
         }
     }
 
     .sticky-toolbox-country {
-        margin-bottom: 15px;
+        display: block;
         color: $white;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
 
         .flag {
-            max-width: 100%;
+            max-width: 70%;
             height: auto;
             margin: 0 auto;
             filter: saturate(0);
 
             @include add-transitions(filter);
+
+            + div {
+                margin-top: .5rem;
+                font-size: 1.2rem;
+            }
         }
 
         &.selected {
