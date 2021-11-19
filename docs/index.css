@@ -15349,7 +15349,8 @@ ode-infotip .toast {
   box-shadow: none !important; }
 
 .form-control::placeholder {
-  font-style: italic; }
+  font-style: italic;
+  color: #adb5bd; }
 
 .input-searchbar {
   position: relative; }

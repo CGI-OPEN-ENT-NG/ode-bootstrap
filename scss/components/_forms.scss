@@ -1,3 +1,5 @@
+$input-placeholder-color: $gray-500;
+
 .input-group {
     .btn {
         box-shadow: none !important;
@@ -6,6 +8,7 @@
 
 .form-control::placeholder {
     font-style: italic;
+    color: $input-placeholder-color;
 }
 
 .input-searchbar {
