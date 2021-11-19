@@ -9,7 +9,6 @@ $breakpoint-down: "lg";
     &-wrapper {
         display: flex;
         justify-content: space-between;
-        max-width: 1920px - (2 * 20) * 1px;
         margin: 20px auto;
 
         @include media-breakpoint-down($breakpoint-down) {
@@ -18,36 +17,45 @@ $breakpoint-down: "lg";
 
             @include add-transitions(transform);
         }
-    }
-
-    &-left {
-        flex: 1;
-        order: 1;
-        margin: 0 20px;
 
         @include media-breakpoint-up($breakpoint-up) {
-            max-width: 350px;
+            padding: 0 2rem;
+            max-width: 1700px;
+            gap: 4rem;
         }
     }
 
-    &-center {
+    &-left,
+    &-center,
+    &-right {
         flex: 1;
+
+        @include media-breakpoint-down($breakpoint-down) {
+            margin: 2rem;
+        }
+    }
+
+    &-left,
+    &-right {
+        @include media-breakpoint-up($breakpoint-up) {
+            max-width: 25%;
+        }
+    }
+
+    &-left {
+        order: 1;
+    }
+
+    &-center {
         order: 2;
-        margin: 0 20px;
 
         @include media-breakpoint-up($breakpoint-up) {
-            max-width: 45%;
+            max-width: 50%;
         }
     }
 
     &-right {
-        flex: 1;
         order: 3;
-        margin: 0 20px;
-
-        @include media-breakpoint-up($breakpoint-up) {
-            max-width: 350px;
-        }
     }
 
     @include media-breakpoint-down($breakpoint-down) {
@@ -89,7 +97,7 @@ $breakpoint-down: "lg";
     }
 
     &-nav {
-        color: #fff;
+        color: $white;
         background-color: $third;
 
         @include media-breakpoint-up($breakpoint-up) {
