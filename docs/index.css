@@ -15805,6 +15805,9 @@ popover {
     text-align: center; }
     .widget-empty-message.link, .feed-item .zone-text .report a.widget-empty-message {
       cursor: pointer; }
+    @media (max-width: 767.98px) {
+      .widget-empty-message {
+        pointer-events: none; } }
   .widget-header {
     position: relative;
     display: flex;
