@@ -26,6 +26,10 @@ $deep-blue: #0984b3 !default;
 
 $primary: $blue !default;
 $secondary: $gray-600 !default;
+$secondary-lightest:    lighten($secondary, 35%);
+$secondary-light:       lighten($secondary, 20%);
+$secondary-dark:        darken($secondary, 10%) ;
+$secondary-darkest:     darken($secondary, 30%) ;
 $third: $deep-blue !default;
 $success: $green !default;
 $info: $cyan !default;
