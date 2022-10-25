@@ -1,4 +1,150 @@
-%btn-alt-base {
+$btn-align-items: center !default;
+$btn-border-radius: 0.8rem !default;
+$btn-border-width: 0.2rem !default;
+$btn-box-shadow: transparent !default;
+$btn-disabled-opacity: 1 !default;
+$btn-display-mode: flex !default;
+$btn-font-size: 1.6rem !default;
+$btn-font-weight: 600 !default;
+$btn-gap: 0.8rem !default;
+$btn-height: 4rem !default;
+$btn-icon-size: 3.6rem !default;
+$btn-svg-size: 2rem !default;
+$btn-justify-content: center !default;
+$btn-line-height: 2.2rem !default;
+$btn-padding-x: 1rem !default;
+$btn-padding-y: 0.8rem !default;
+
+.btn {
+  --#{$prefix}btn-active-box-shadow-color: #{$btn-box-shadow};
+  --#{$prefix}btn-align-items: #{$btn-align-items};
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-display-mode: #{$btn-display-mode};
+  --#{$prefix}btn-focus-bg: #{$primary};
+  --#{$prefix}btn-focus-border-color: #{$orange-200};
+  --#{$prefix}btn-focus-box-shadow-color: #{$btn-box-shadow};
+  --#{$prefix}btn-focus-color: #{$white};
+  --#{$prefix}btn-font-size: #{$btn-font-size};
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-gap: #{$btn-gap};
+  --#{$prefix}btn-height: #{$btn-height};
+  --#{$prefix}btn-icon-size: #{$btn-icon-size};
+  --#{$prefix}btn-justify-content: #{$btn-justify-content};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+
+  height: var(--#{$prefix}btn-height);
+  min-width: var(--#{$prefix}btn-min-width);
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  span {
+    align-items: var(--#{$prefix}btn-align-items);
+    display: var(--#{$prefix}btn-display-mode);
+    gap: var(--#{$prefix}btn-gap);
+    justify-content: var(--#{$prefix}btn-justify-content);
+  }
+
+  svg {
+    height: $btn-svg-size;
+    width: $btn-svg-size;
+    min-width: $btn-svg-size;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &.btn-icon {
+    padding: 0;
+    height: var(--#{$prefix}btn-icon-size);
+    width: var(--#{$prefix}btn-icon-size);
+  }
+
+  &.btn-loading {
+    pointer-events: none;
+
+    svg {
+      animation: loading 1s infinite;
+    }
+  }
+
+  &.btn-circle {
+    @include circle(2.5em);
+    @include have-child-in-middle();
+
+    @include add-transitions(color, background-color) {
+      color: #fff;
+      text-decoration: none;
+      background-color: $secondary-900;
+    }
+
+    position: relative;
+    display: inline-flex;
+    font-size: 2em;
+    color: $white;
+    background-color: $secondary;
+
+    .label {
+      position: absolute;
+      bottom: -2em;
+      font-size: 0.8em;
+      color: $gray-700;
+    }
+  }
+
+  &:first-child:active:focus-visible {
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none;
+
+    &:focus-visible {
+      box-shadow: none;
+    }
+  }
+
+  &:focus-visible,
+  &.focus-visible {
+    background-color: var(--#{$prefix}btn-focus-bg);
+    border-color: var(--#{$prefix}btn-focus-border-color);
+    box-shadow: none;
+  }
+}
+/* 
+[class*="btn-outline"] {
+  &:active,
+  &.active {
+    --#{$prefix}btn-border-width: 0.1rem;
+    box-shadow: none;
+
+    &:focus-visible {
+      box-shadow: none;
+    }
+  }
+
+  &:focus-visible,
+  &.focus-visible {
+    --#{$prefix}btn-border-width: 0.1rem;
+    box-shadow: none;
+  }
+} */
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* %btn-alt-base {
   position: relative;
   z-index: 2;
   padding: 0 15px;
@@ -14,8 +160,8 @@
   &.btn-alt {
     @extend %btn-alt-base;
 
-    background-color: $third;
-    border-color: $third;
+    background-color: $secondary;
+    border-color: $secondary;
 
     @include add-transitions(border-color, background-color) {
       background-color: $orange;
@@ -31,9 +177,9 @@
       border-color: $orange;
     }
 
-    color: $third;
+    color: $secondary;
     background-color: transparent;
-    border: 1px solid $third;
+    border: 1px solid $secondary;
   }
 
   &-light {
@@ -53,7 +199,7 @@
     @include add-transitions(color, background-color) {
       color: #fff;
       text-decoration: none;
-      background-color: $cyan;
+      background-color: $blue-900;
     }
 
     position: relative;
@@ -61,7 +207,7 @@
     // margin-bottom: 1.5em;
     font-size: 2em;
     color: #fff;
-    background-color: $third;
+    background-color: $secondary;
 
     .label {
       position: absolute;
@@ -75,3 +221,4 @@
     @include circle(32px);
   }
 }
+ */
